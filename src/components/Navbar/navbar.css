@@ -1,0 +1,22 @@
+/* NAVBAR RULES */
+    .navbar-style{z-index: 1; position: fixed; width: auto; height: 130px; top: 0;}
+    .navbar-style ul{ position:inherit;left:33%;display:flex;list-style:none;max-width:auto;margin:auto;}
+/* NAVBAR ITEMS */
+    .navbar-style ul li{display:inline-flex;max-width:auto;padding:0px 8px;margin:0 8px;font-size:1.2em;font-weight:900;}
+    .navbar-style a{ text-decoration: none; color: #fff; height: 100px;}
+    .navbar-style a:hover{ width:max-content; height: max-content; background-color: rgba(139, 139, 139, 0.514); color: black; }
+/* H1 LABEL */
+    h1{ position: relative; left: 50px; top: 35px; color: #fff; max-width: auto;
+    font-weight: 900; font-size: 2.3em; cursor: pointer;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;}
+/* SEARCH BAR STYLES */
+    .search{border: none; position: inherit; right: 70px; top: 45px; height: 51px; width: 179px;
+    background-color: rgba(0, 0, 0, 0); border-bottom: 3px solid #fff;}
+    .search::placeholder{color: #000;  font-weight: 600;   font-size: .9em;}
+    .search:focus{outline: none;}
+    /*LUPA*/
+    .lupa{position: inherit; width: 45px; height: 45px; right: 260px;cursor: pointer;}
+/* CART */
+.shopping-cart{
+    width: 80px; height: 45px;
+    position: inherit;right: 10px; top: 52.5px; cursor: pointer;}
