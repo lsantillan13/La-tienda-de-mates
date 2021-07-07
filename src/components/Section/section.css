@@ -1,16 +1,22 @@
-/* WALLPAPER */
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
+
+/* HERO */
+.mp4-hero{ position: absolute; height: 87vh; width: 100%; top: 125px;}
+.mp4{ position: absolute; right: 490.9px; width: 100%; height: 90%;}
 section{
-    position: absolute;
-    top: 0;
-    z-index: 0;
+    background-color: #e5e5e5;
+    position: inherit;
+    top: 100vh;
+    /* background-color: #e5e5e5; */
     width: 100%;
     /* background: rgb(171,37,164);
     background: linear-gradient(257deg, rgba(171,37,164,1) 0%, rgba(69,159,159,1) 100%); */
-    height: 100vh;
-     background-image: url('../../assets/img/background2.jpg');
+    height: 10vh;
+    /* background-image: url('../../assets/img/background.jpg'); */
     background-size:cover;
-    background-position: right 70%;
-    filter: saturate(var(--value, 1.8))}
+    background-position: center top;
+    filter: saturate(var(--value, 2np))}
     .caption-inner{
         position: inherit;
         top: 250px;
@@ -18,20 +24,32 @@ section{
         width: 704px;
         height: 327.6px;
         background-color: #fff;
-        color: #001a30;    }
+        color: #001a30;}
+    .caption-inner::after{
+        z-index: 1;
+        content: ' ';
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        transform: translateY(-0.5px);
+        clip-path: polygon(0 0,100% 0,100% 0,0 100%);    }
 
-    .caption-title{
-        text-transform: uppercase; text-align: center; font-size: 48px;
-    }
+    .caption-title{text-transform: uppercase; text-align: center; font-size: 48px;}
+    .caption-title h4{font-family: 'Yellowtail', cursive; color:purple;}
     .caption-sub{
         font-size: 16px !important;
         font-weight: normal !important;
         font-family: sans-serif !important;
-        text-align: center;
-    }
+        text-align: center;}
     button{color: #001a30; width: 211.6px; height: 54px; position: relative; left: 65px; cursor: pointer; top: 50px;
          background-color: rgba(255, 255, 255, 0);}
-button:hover{
-    background-color: #001a30; color: #fff;
-}
+button:hover{background-color: #001a30; color: #fff;}
 
+.title-container{position: relative; height: 80px;background-color:#e5e5e5;}
+.title-container::after{content: ''; display: flex; height: 76px; position: absolute;width: 1px; background-color: #e3e3e3; top: 0; left: 650px;}
+.title-container h1{position: inherit;font-size: 36px; left: 220px; width: 345px; padding: 15px 0; top: 5px;}
+.title-container h2{ color: red; position: inherit;font-size: 18px; font-family: 'Work Sans'; text-transform: uppercase; width: max-content; right: -750px;
+bottom:50px; margin: 0 0; padding: 0;}

@@ -1,0 +1,17 @@
+div .contenedor{
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contenedor h1{
+    font-size: 5em;
+    background-color: #fff;
+
+}

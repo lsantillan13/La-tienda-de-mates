@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
+
 *,*::after,*::before{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -7,6 +8,13 @@
     box-sizing: border-box;
     font-size: 100%;
     vertical-align: baseline;
+    background-color: #e5e5e5;
+    scroll-behavior: smooth;}
 
+h1{
+    position: relative;
+    font-size: 30em;
+    top: 500px;
 }
+
 

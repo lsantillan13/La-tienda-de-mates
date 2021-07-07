@@ -1,22 +1,69 @@
-/* NAVBAR RULES */
-    .navbar-style{z-index: 1; position: fixed; width: auto; height: 130px; top: 0;}
-    .navbar-style ul{ position:inherit;left:33%;display:flex;list-style:none;max-width:auto;margin:auto;}
-/* NAVBAR ITEMS */
-    .navbar-style ul li{display:inline-flex;max-width:auto;padding:0px 8px;margin:0 8px;font-size:1.2em;font-weight:900;}
-    .navbar-style a{ text-decoration: none; color: #fff; height: 100px;}
-    .navbar-style a:hover{ width:max-content; height: max-content; background-color: rgba(139, 139, 139, 0.514); color: black; }
-/* H1 LABEL */
-    h1{ position: relative; left: 50px; top: 35px; color: #fff; max-width: auto;
-    font-weight: 900; font-size: 2.3em; cursor: pointer;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;}
-/* SEARCH BAR STYLES */
-    .search{border: none; position: inherit; right: 70px; top: 45px; height: 51px; width: 179px;
-    background-color: rgba(0, 0, 0, 0); border-bottom: 3px solid #fff;}
-    .search::placeholder{color: #000;  font-weight: 600;   font-size: .9em;}
-    .search:focus{outline: none;}
-    /*LUPA*/
-    .lupa{position: inherit; width: 45px; height: 45px; right: 260px;cursor: pointer;}
-/* CART */
-.shopping-cart{
-    width: 80px; height: 45px;
-    position: inherit;right: 10px; top: 52.5px; cursor: pointer;}
+/* SERIF FONTS */
+@font-face {
+   font-family: "GraphikRegular";
+   src: url("../../assets/fonts/GraphikRegular.otf") format("opentype"),}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/* /\/\\/\ */
+/* NAV BAR */
+.navbar-style { z-index: 2; position: fixed ; width: 100%; height: 110px; background-color: #e5e5e5; display: flex;
+   border-bottom: 3px solid #e1e1e1;}
+/*  LOGO   */
+.logo {position: fixed; top: 60px; left: 15%; width: 80px; transform: translate(-50%, -50%)}
+/*ITEMS LIST*/
+.header--list { display: flex; position: relative; left: 150px; text-align: center;}
+/*LIST ITEMS*/
+.list-item {top: 45px; position: relative; list-style: none; padding: 0 15px; width: auto; height: min-content;
+   font-size: 1.4em; font-weight: 600;}
+.list-item a {text-decoration: none; font-family: 'GraphikRegular', 'Poppins', sans-serif; max-height: min-content;
+   width: auto;color: #000;}
+.active a {color: red;}
+/* CLICKABLES */
+.Cart { width: 40px; position: relative; right: 0;} .Shopping-cart { position: relative; left: 400px; width: max-content;}
+.User { width: 40px; position: relative; right: 0; top: 0;} .User-login { position: relative; left: 400px; width: max-content;}
+/* /\/\\/\ */
+/* SEARCH BAR*/
+input[type="checkbox"] {display: none;}
+.search-container{background-color: #e5e5e548;}
+.box {
+   z-index: 1;
+   position: relative;
+   top: 60px;
+   left: 17%;
+   transform: translate(-50%, -50%);
+   width: 400px;
+   height: 60px;}
+.box label {
+   position: absolute;
+   right: 0;
+   width: 60px;
+   height: 60px;
+   line-height: 60px;
+   border-radius: 50%;
+   text-align: center;
+   color: gray;
+   cursor: pointer;
+   transition: .5s;
+   font-size: 23px;
+   box-shadow: -5px -5px -8px #edeff1, 5px 5px 8px #cacfd8;}
+.box label:hover {box-shadow: -5px -5px -8px #edeff1, 5px 5px 10px #cacfd8;}
+
+.box input {
+   width: 400px;
+   height: 100%;
+   background-color: #fff;
+   border: none;
+   border-radius: 20px;
+   outline: none;
+   font-size: 19px;
+   padding-left: 20px;
+   color: gray;
+   box-shadow: -5px -5px 10px #edeff1, 5px 5px 5px #cacfd8;}
+
+
+/* PENDIENTES */
+/* 1- CREAR HOVER PARA LOS VÍNCULOS
+   2- CREAR MODAL PARA LOS VÍNCULOS
+   3- AÑADIR HAMBURGUER PARA MOBILE
+   4- CONTADOR PARA EL SHOPPING-CART
+*/
