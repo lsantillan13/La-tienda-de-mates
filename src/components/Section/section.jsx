@@ -19,8 +19,8 @@ const Section = () => {
             </div> */}
         
             <div className="title title-container">
-                <h1>La Tienda de Mates</h1>
-            <h2>Productos destacados</h2>
+                <h1 className="title-main-title">La Tienda de Mates</h1>
+            <h2 className="subtitle">Productos destacados</h2>
             </div>
 
 

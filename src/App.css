@@ -8,13 +8,5 @@
     box-sizing: border-box;
     font-size: 100%;
     vertical-align: baseline;
-    background-color: #e5e5e5;
     scroll-behavior: smooth;}
-
-h1{
-    position: relative;
-    font-size: 30em;
-    top: 500px;
-}
-
-
+#root{background-color: #e5e5e5;}

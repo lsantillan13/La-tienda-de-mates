@@ -24,43 +24,15 @@
 /* /\/\\/\ */
 /* SEARCH BAR*/
 input[type="checkbox"] {display: none;}
+.search{background: transparent;}
 .search-container{background-color: #e5e5e548;}
-.box {
-   z-index: 1;
-   position: relative;
-   top: 60px;
-   left: 17%;
-   transform: translate(-50%, -50%);
-   width: 400px;
-   height: 60px;}
-.box label {
-   position: absolute;
-   right: 0;
-   width: 60px;
-   height: 60px;
-   line-height: 60px;
-   border-radius: 50%;
-   text-align: center;
-   color: gray;
-   cursor: pointer;
-   transition: .5s;
-   font-size: 23px;
-   box-shadow: -5px -5px -8px #edeff1, 5px 5px 8px #cacfd8;}
+.box { position: relative; z-index: 1;top: 60px; left: 17%; transform: translate(-50%, -50%); width: 400px; height: 60px;}
+.box label {position: absolute; right: 0; width: 60px; height: 60px; line-height: 60px; border-radius: 50%; color: gray;
+   text-align: center; cursor: pointer; transition: .5s; font-size: 23px; background:transparent;}
 .box label:hover {box-shadow: -5px -5px -8px #edeff1, 5px 5px 10px #cacfd8;}
-
-.box input {
-   width: 400px;
-   height: 100%;
-   background-color: #fff;
-   border: none;
-   border-radius: 20px;
-   outline: none;
-   font-size: 19px;
-   padding-left: 20px;
-   color: gray;
-   box-shadow: -5px -5px 10px #edeff1, 5px 5px 5px #cacfd8;}
-
-
+.box input {width: 400px; height: 100%; background-color: #fff; border: none; border-radius: 20px; outline: none;
+   font-size: 19px; padding-left: 20px; color: gray; box-shadow: -5px -5px 10px #edeff1, 5px 5px 5px #cacfd8;}
+/* /\/\\/\ */
 /* PENDIENTES */
 /* 1- CREAR HOVER PARA LOS VÍNCULOS
    2- CREAR MODAL PARA LOS VÍNCULOS

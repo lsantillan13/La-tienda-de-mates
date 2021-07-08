@@ -1,13 +1,17 @@
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/navBar';
 import Section from './components/Section/section';
 import Slider from './components/Slider/Slider';
 import ListedItems from './components/ListedItems/ListedItems';
-import { render } from '@testing-library/react';
+import Cart  from './components/Cart/Cart';
+import {MyCount} from './components/Contador/Contador';
 
-let prueba = prompt('Ingrese su nombre')
+
+
 
 function App( props ) {
+
   return (
   /*INITIAL MAIN TAG FOR ENTIRE APP*/
     <main className="App container">
@@ -20,7 +24,9 @@ function App( props ) {
        
      </Section>
     
-     <ListedItems greetings={'Hola ' + prueba }/>
+     <ListedItems greetings/>
+     <Cart></Cart>
+     <MyCount/>
 
 
     </main>);
