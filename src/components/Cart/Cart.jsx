@@ -1,10 +1,9 @@
-import React, { useState}  from 'react';
+import React, {useState} from 'react';
 import styled, { css } from 'styled-components';
 import './Cart.css';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import {BsBag} from 'react-icons/bs';
-
 
 const Container = styled.div`
     display: flex;
@@ -38,26 +37,29 @@ font-size: 20px;
 background-color: transparent;
 width: max-content;
 `
-
-
 const Cart = ( ) => {
-
-    // const[showModal, setShowModal] = useState(false)
-    // const openModal = () =>{
-    //     setShowModal(prev => !prev)
-    // }
-
+    const [arrayNumero, setarrayNumero ] = useState([1])
+    const [numero, setNumero] = useState(1)
+    const agregar = () => { setNumero (numero + 1)}
+    const restar = () => {setNumero (numero - 1)}
     return (
         <Container>
-            <div className="Cart--popup">                                             
+           <div className="Cart--popup">                                             
                 <span className="Cart-popup-container"><BsBag className="Cart-popup-bag-icon"/> 
                 <h2 className="Cart-popup-title">Tu carrito de compras</h2>
 {/*<P>JAVASCRIPT</P> ----->*/}<p className="Cart-popup-item-counter">(0)</p>             
                <button className="Cart--popup-close-button"> <AiOutlineClose className="Cart--popup-close-icon"/></button> </span>
             <div className="Cart-popup-content"><div className="Cart-popup-product">
+                
             <div className="Cart-popup-product-item-info">
             <div className="Cart-popup-product-item-name"> <h2 className="item-name">Item</h2> </div>
             <div className="Cart-popup-product-item-image"/>    
+            <div className="productos-prueba">
+            <button onClick={restar}>-</button>
+            {arrayNumero.map((item, arrayNumero) =>
+            <p>{numero}</p>)}
+            <button onClick={agregar}>+</button>
+        </div>
             </div></div></div>
             <div className="Cart-popup-bottom">
               <table><tr>
@@ -72,9 +74,16 @@ const Cart = ( ) => {
                 </button>
             </div>
             </div>
-            <Button> <Text>Añadir al Carrito <AiOutlineArrowRight className="arrow" /> </Text></Button>
+            <div>
+
+            </div>
+            <Button> <Text> Añadir al Carrito <AiOutlineArrowRight className="arrow" /> </Text></Button>
+
+
+
         </Container>
 
+    
 
     )}
 

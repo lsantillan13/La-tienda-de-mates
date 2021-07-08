@@ -1,9 +1,12 @@
+import React, {useState} from 'react';
 import './ListedItems.css'
 import product0 from '../../assets/img/products/0.jpg'
-
+import Cart from '../Cart/Cart';
 
 
 const ListedItems = ( props ) => {
+
+   
     return (
         <div className="product">
             <div className="product--wishlist"> <img src="" alt="" />  </div>
@@ -13,8 +16,9 @@ const ListedItems = ( props ) => {
             <h2 className="product--info"> Información del producto</h2>
             <div className="product--price"> $0</div>
             </div>
-            <h2>{props.greetings}</h2>
+            
         </div>
+
 
     )
 }

@@ -5,7 +5,8 @@ import Section from './components/Section/section';
 import Slider from './components/Slider/Slider';
 import ListedItems from './components/ListedItems/ListedItems';
 import Cart  from './components/Cart/Cart';
-import {MyCount} from './components/Contador/Contador';
+// import {MyCount} from './components/Contador/Contador';
+
 
 
 
@@ -24,9 +25,10 @@ function App( props ) {
        
      </Section>
     
-     <ListedItems greetings/>
-     <Cart></Cart>
-     <MyCount/>
+     <ListedItems/>
+     <Cart>
+     </Cart>
+     <div/>
 
 
     </main>);
