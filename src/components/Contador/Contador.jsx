@@ -1,22 +1,17 @@
-import React  from 'react';
+import React, {useState} from 'react';
+import './Contador.css';
 
-export function MyCount (){
-    //  const [state, useState] = useState (1)
-    //  const handleButton = () => {  setState (state +1) }
-    //  const reset = () => { setState (1) }
-
-    return(
-        <div>
-            {/* <button onClick={handleButton}>HOLA</button>
-            <h2>clicks : {state}</h2>
-            <button onClick={reset}>reset</button> */}
-
-
-        </div>
-
-
+export default function Contador () {
+    const [arrayNumero ] = useState([1])
+    const [numero, setNumero] = useState(1)
+    const agregar = () => { setNumero (numero + 1)}
+    const restar = () => {setNumero (numero - 1)}
+    return (
+        <div className="product-ammount-count">
+        <button onClick={restar}>-</button>
+        {arrayNumero.map((item, arrayNumero) =>
+        <p>{numero}</p>)}
+        <button onClick={agregar}>+</button>
+        </div>        
     )
 }
-
-
-export default MyCount  

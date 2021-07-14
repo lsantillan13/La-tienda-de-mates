@@ -1,36 +1,31 @@
-import React from 'react';
+// import { BrowserRouter, Switch, Route } from "react-router-dom";
+import React, {useState} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/navBar';
-import Section from './components/Section/section';
 import Slider from './components/Slider/Slider';
-import ListedItems from './components/ListedItems/ListedItems';
 import Cart  from './components/Cart/Cart';
+import Cartsvg from './assets/img/shopping-cart.svg';
+import TopProducts from './components/TopProducts/TopProducts';
+
 // import {MyCount} from './components/Contador/Contador';
-
-
-
-
-
 function App( props ) {
+
+
+
+  
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
   /*INITIAL MAIN TAG FOR ENTIRE APP*/
-    <main className="App container">
+    <main className="App container-fluid">
       {/*HEADER PLUS NAV SECTIONS*/}
-      <Navbar/>
-      {/*Slider*/}
+      <Navbar>
+      <li className="list-item Shopping-cart"><button onClick={() => setIsOpen(true)} className="CartButton"><img className="Cart" src={Cartsvg} alt="shopping-cart-icon"/>Cart</button></li>
+      </Navbar>
       <Slider/>
-     {/*MAIN SECTION - 1ST SECTION*/}
-     <Section>
-       
-     </Section>
-    
-     <ListedItems/>
-     <Cart>
-     </Cart>
-     <div/>
-
-
+      <Cart open={isOpen} onClose={() => { setIsOpen(false)}}/>
+ 
+    <TopProducts/>
     </main>);
     
   }

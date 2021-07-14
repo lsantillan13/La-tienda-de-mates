@@ -1,0 +1,3 @@
+.product-ammount-count button{ width: 100px; height: min-content; position: relative; margin: 15px 20px;}
+p{top: 10px; position: relative; font-size: 1.5em;}
+.product-ammount-count{width: 150px; height: auto; background-color: #fff; display: flex; top:140px; position: absolute; left: 120px;}
