@@ -34,9 +34,17 @@ const ListedItems = ( props ) => {
         precio: 780,
         imagen: image3}
     ]
+
+    const getProductos = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(productos);
+            },4000);
+        })
+    }
+getProductos().then((datos) =>  console.log(productos));
+
     return (
-
-
         <section className="top-products container-fluid">
           {productos.map(pro =>
             <div className="product" key={pro.id}>
@@ -53,7 +61,6 @@ const ListedItems = ( props ) => {
             </div>
             </div>
             )}
-            
             </section>
 
     )

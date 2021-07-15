@@ -3,7 +3,6 @@ import ListedItems from '../ListedItems/ListedItems';
 import './TopProducts.css'
 
 
-
 export default function TopProducts( ){
 
 return(
