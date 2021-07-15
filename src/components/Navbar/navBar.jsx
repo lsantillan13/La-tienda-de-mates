@@ -14,7 +14,7 @@ const Navbar = ( {props, children}) => {
             <a href="index.html"> <img className="logo" src={Logo} alt="" /> </a>
             <ul className="header--list">
                 <li className="list-item active"><a href="index.html">SALE</a></li>
-                <li className="list-item"><a href="index.html">Productos</a></li>
+                <li className="list-item"><a href="/Productos">Productos</a></li>
                 <li className="list-item"><a href="index.html">Mayorista</a></li>
                 <li className="list-item"><a href="index.html">Tips</a></li>
                 <li className="list-item User-login"> <a href="index.html"><img className="User" src={User} alt="user-icon-for-login"/>Login</a></li>

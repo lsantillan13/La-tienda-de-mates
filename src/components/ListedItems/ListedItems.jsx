@@ -30,7 +30,7 @@ const ListedItems = ( props ) => {
         {id: 3,
         tipo: 'geoide',
         nombre: 'Mate tu primo ',
-        descripcion: 'Mate con forma de Geoíde más Azucarera pintados con mandalas',
+        descripcion: 'Mate con forma de Geoíde de tu primo personalizado',
         precio: 780,
         imagen: image3}
     ]
