@@ -6,27 +6,35 @@
 
 /* /\/\\/\ */
 /* NAV BAR */
-.navbar-style { z-index: 2; position: fixed ; width: 100%; height: 110px; background-color: #fff; display: flex; left: 0;
+.navbar-style { z-index: 2; position: fixed ; width: 100%; height: 110px; background-color: #fafafa; display: flex; left: 0;
    border-bottom: 3px solid #e1e1e1; border-radius: 1%;}
 /*  LOGO   */
-.logo {position: fixed; top: 60px; left: 15%; width: 80px; transform: translate(-50%, -50%)}
+.brand{z-index: 1;}
+.logo {position: absolute; top: 60px; left: 15%; width: 80px; transform: translate(-50%, -50%); cursor: pointer;}
 /*ITEMS LIST*/
-.header--list { display: flex; position: relative; left: 150px; text-align: center;}
+.header--list { display: flex; position: relative; right:70px; text-align: center;}
 /*LIST ITEMS*/
 .list-item {top: 45px; position: relative; list-style: none; padding: 0 15px; width: auto; height: min-content;
-   font-size: 1.4em; font-weight: 600;}
+   font-size: 1.2em; font-weight: 600;}
 .list-item a {text-decoration: none; font-family: 'GraphikRegular', 'Poppins', sans-serif; max-height: min-content;
    width: auto;color: #000;}
+   .list-item-left a:hover{
+   width: max-content;
+   padding: 0 5px;
+   background:transparent;
+   color: red;
+   transition: .3s;}
+
 .active a {color: red;}
 /* CLICKABLES */
 .Cart { width: 40px; position: relative; right: 0;} .Shopping-cart { position: relative; left: 520px; width: max-content;}
-.User { width: 40px; position: relative; right: 0; top: 0;} .User-login { position: relative; left: 500px; width: max-content;}
+.User { width: 40px; position: relative; right: 0; top: 0;} .User-login { position: relative; left:735px; width: max-content;}
 /* /\/\\/\ */
 /* SEARCH BAR*/
 input[type="checkbox"] {display: none;}
 .search{background: transparent;}
-.search-container{background: #fff;}
-.box { position: relative; z-index: 1;top: 60px; left: 17%; transform: translate(-50%, -50%); width: 400px; height: 60px;}
+.search-container{background: #fafafa;}
+.box { position: relative; z-index: 1;top: 20px; left: 33%; transform: translate(-50%, -50%); width: 400px; height: 60px;}
 .box label {position: absolute; right: 0; width: 60px; height: 60px; line-height: 60px; border-radius: 50%; color: gray;
    text-align: center; cursor: pointer; transition: .5s; font-size: 23px; background:transparent;}
 .box label:hover {box-shadow: -5px -5px -8px #edeff1, 5px 5px 10px #cacfd8;}

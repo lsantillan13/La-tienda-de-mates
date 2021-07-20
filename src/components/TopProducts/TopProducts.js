@@ -7,7 +7,7 @@ export default function TopProducts( ){
 
 return(
 <section>
-    <div className="title title-container" style={{background: '#fff'}}>
+    <div className="title title-container">
             <h1 className="title-main-title">La Tienda de Mates</h1>
         <h2 className="subtitle">Productos destacados</h2>
     </div>

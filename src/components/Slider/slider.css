@@ -1,1 +1,100 @@
 .Slider{z-index: 1; position: inherit; width: 100%; height: 100vh; text-align: center;}
+.my-hero-container{
+    top: 125px;
+    position: relative;
+    background: #fff;
+    width: 100%; 
+    height: 78%;}
+.my-hero-container-first-col , .my-hero-container-second-col{
+    right: 250px;
+    display: flex;
+    width: 100%;
+    top: 60px;
+    position: relative;
+    height: auto;}
+.my-hero-container-first-col .box, .my-hero-container-second-col .box{
+    width: auto;
+    top: 140px;
+    height: auto;
+    position: relative;
+    left: 30%;
+}
+.hero-image{
+    position: relative;
+    width: 250px;
+}
+.hero-first-image, .hero-second-image, .hero-third-image
+,
+.hero-fourth-image, .hero-fifth-image , .hero-sixth-image{
+    margin-left: 8px;
+    transition: .3s;
+    margin-top: 4px;
+    border-radius: 5px;}
+.hero-first-image:hover, .hero-second-image:hover, .hero-third-image:hover
+,
+.hero-fourth-image:hover, .hero-fifth-image:hover, .hero-sixth-image:hover{
+transform: scale(1.1);
+z-index: 2;
+}
+div .my-hero-profile-info{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+}
+.my-hero-profile-info img{
+    width: 105px;
+    position: absolute;
+    right: 416px;
+    background: transparent;
+    top: 32px;
+}
+
+.my-hero-profile-info li{
+    
+    display: flex;
+}
+.profile-info-item{ position: relative; font-size: .69em; width: min-content;margin: 0 10px; padding: 5px 5px;
+ top: 25px; float: right; right: 5px;
+}
+
+.profile-info-item button{
+    top: 55px;
+    left: 350px;
+    background: black;
+    width: 125px;
+    padding: 5px 5px;
+    color: #fff;
+}
+.profile-info-title{
+    cursor: pointer;
+    color: #262626;
+    width: max-content;
+    left: 872px;
+    top: 36px;
+    position: relative;
+}
+
+.profile-info-description{
+    color:#262626;
+    position: relative;
+    top: 132px;
+    left: 800px;
+    width: 436px;
+
+}
+.profile-info-description h2, .profile-info-description ul li{
+    width: max-content;
+}
+.profile-items-list a{
+    text-decoration: none;
+
+}
+.instagram-logo{
+    margin: auto;
+    left: 0;
+    top: -520px;
+    cursor: pointer;
+    width: 240px;
+    position: relative;
+}

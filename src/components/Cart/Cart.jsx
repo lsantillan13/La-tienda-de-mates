@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import './Cart.css';
 import Contador from '../../components/Contador/Contador';
 import '../../components/Contador/Contador.css'

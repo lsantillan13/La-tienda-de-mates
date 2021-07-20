@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-form-title{    position: relative;    top: 148px;}
+.login-form-subtitle{position: relative; top: 156px; font-size: 1.2em;}
+.login-form-container{text-align: center;z-index: 90;display: block;position: inherit;
+width: 100%;height: 100vh;background: #fff /*#ededed*/;}
+div form{ top: 380px;  position: relative;}
+
+.label-for-email, .label-for-password{
+    position: relative;
+    width: 380px;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    left: 0;
+    top: -130px;}
+.log-in-button{position: relative; top: -115px;left: 0;margin: auto;width: 380px;padding: 5px; background: pink; color: #fff;}
+.label-title{right: 50px;position: inherit; bottom: 135px; font-size: 1.9em;}
+h6{ position: relative; font-size: 1em; bottom: 100px;}
+.label-for-instagram{
+    position: relative;
+    bottom: 100px;
+    width: 500px;
+    height: 300px;}
+
+.instagram{
+    position: absolute;
+
+    height: 300px;
+}

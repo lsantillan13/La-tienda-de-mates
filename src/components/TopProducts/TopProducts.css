@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
-.title-container{position: relative; height: 80px;background-color:#e5e5e5;}
-.title-container::after{content: ''; display: flex; height: 76px; position: absolute;width: 1px; background-color: #e3e3e3; top: 0; left: 650px;}
+.title-container{position: relative; height: 35px; top: 0; background-color: #fafafa;}
+.title-container::after{content: ''; display: flex; height: 76px; position: absolute;width: 1px; top: 0; left: 650px;}
 .title-container .title-main-title{position: inherit;font-size: 36px; left: 220px; width: 345px; padding: 15px 0; top: 5px;}
 .title-container .subtitle{ color: red; position: inherit;font-size: 18px; font-family: 'Work Sans'; text-transform: uppercase; width: max-content; right: -750px;
 bottom:50px; margin: 0 0; padding: 0;}
