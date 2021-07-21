@@ -27,7 +27,7 @@ function App( props ) {
       <Slider/>
       <Cart open={isOpen} onClose={() => { setIsOpen(false)}}/>
     <TopProducts/>
-    <ItemDetail/>
+    {/* <ItemDetail/> */}
         </Route>
       </Switch>
       
