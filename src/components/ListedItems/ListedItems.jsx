@@ -1,20 +1,20 @@
 import React from 'react';
 import './ListedItems.css'
-import productos from '../../data/productos'
+import Productos from '../../data/productos'
 const ListedItems = ( {props, children} ) => {   
     return (
     <section className="section-top-products container-fluid">
     <div className="top-products container-fluid">
-        {productos.map(pro => <div className="product" key={pro.id}>
+        {Productos.map(Pro => <div className="product" key={Pro.id}>
         <div className="product--wishlist"/>
-        <a href={pro.tipo + '/' + pro.forma + '/' + pro.id} className="product-link">
+        <a href={Pro.tipo + '/' + Pro.forma + '/' + Pro.id} className="product-link">
             <div className="product--image-placeholder">
-            <img className="product--image" src={pro.imagen} alt={'imagen-de-mate-producto-' + pro.id}/>
+            <img className="product--image" src={Pro.imagen} alt={'imagen-de-mate-producto-' + Pro.id}/>
             </div>
         </a><div className="product--details">
-        <div className="product--name"> {pro.nombre} </div>
-        <div className="product--info"> {pro.descripcion}</div>
-        <div className="product--price">{'$' + pro.precio}</div>
+        <div className="product--name"> {Pro.nombre} </div>
+        <div className="product--info"> {Pro.descripcion}</div>
+        <div className="product--price">{'$' + Pro.precio}</div>
         <button className="add-to-cart">Añadir al Carrito</button>
         </div>
         </div>

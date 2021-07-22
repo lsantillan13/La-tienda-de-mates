@@ -3,6 +3,7 @@
     background-color: rgba(0,26,48,.1);
     position: relative;
     height: 90vh;
+    top: 50px;
 }
 .product__image{
     display: flex;

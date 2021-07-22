@@ -4,7 +4,7 @@ import ImagenPrueba from "../../assets/img/products/0.jpg";
 import Contador from '../Contador/Contador'
 function ItemDetail(){
 
-    const items = [
+    const Items = [
         {
         id: 0,
         tipo: "Mate personalizado",
@@ -18,7 +18,7 @@ function ItemDetail(){
     ]
     return(
         <section className="section">
-            {items.map(MappedItem =>
+            {Items.map(MappedItem =>
             <div className="grid">
                    <img className="product__image" src={MappedItem.imagen} alt={"imagen-de-producto" + MappedItem.id}/>
             <div class="product__details">

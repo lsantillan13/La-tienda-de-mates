@@ -1,36 +1,36 @@
-import image0 from '../assets/img/products/0.jpg';
-import image1 from '../assets/img/products/1.jpg';
-import image2 from '../assets/img/products/2.jpg';
-import image3 from '../assets/img/products/3.jpg';
+import Image0 from '../assets/img/products/0.jpg';
+import Image1 from '../assets/img/products/1.jpg';
+import Image2 from '../assets/img/products/2.jpg';
+import Image3 from '../assets/img/products/3.jpg';
 // PRODUCTOS DESTACADOS
- const productos = [
+ const Productos = [
     {id: 0,
     tipo: 'mate',
     forma: 'huevo',
     nombre: 'Mate luego existo',
     descripcion: 'Mate con forma de Huevo color personalizado.',
     precio: 780,
-    imagen: image0},
+    imagen: Image0},
     {id: 1,
     tipo: 'mate',
    forma: 'huevo',
     nombre: 'Mate Mandala',
     descripcion: 'Mate con forma de Huevo más Azucarera pintados con mandalas',
     precio: 1200,
-    imagen: image1},
+    imagen: Image1},
     {id: 2,
     tipo: 'mate',
     forma: 'geoide',
     nombre: 'Mate día del padre',
     descripcion: 'Mate con forma de Geoíde personalible felíz día del padre',
     precio: 780,
-    imagen: image2},
+    imagen: Image2},
     {id: 3,
     tipo: 'mate',
     forma: 'geoide',
     nombre: 'Mate tu primo ',
     descripcion: 'Mate con forma de Geoíde de tu primo personalizado',
     precio: 780,
-    imagen: image3}
+    imagen: Image3}
 ]
-export default productos
+export default Productos

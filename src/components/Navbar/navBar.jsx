@@ -1,3 +1,4 @@
+import { BrowserRouter, Switch, Route} from "react-router-dom";
 import React from "react";
 import "./navbar.css";
 import Logo from '../../assets/img/logo.png';
@@ -6,10 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsSearch } from 'react-icons/bs';
 
 
-const Navbar = ( { props, children}) => {
+const NavBar = ( { props, children}) => {
     return (
     <nav className="navbar-style container-fluid">
-        <a className="brand" href="index.html"> <img className="logo" src={Logo} alt="" /> </a>
+        <BrowserRouter>
+        <Switch>
+        <Route exact path={'/'} component={NavBar}>
+        <a className="brand" href="/"> <img className="logo" src={Logo} alt="" /> </a>
         <ul className="header--list">
             <li className="list-item list-item-left active"><a href="/Sale">SALE</a></li>
             <li className="list-item list-item-left"><a href="/Productos">Productos</a></li>
@@ -24,6 +28,10 @@ const Navbar = ( { props, children}) => {
     <label htmlFor="check"><BsSearch className="search"/></label>
     </div>
     </span>
+    </Route>
+    </Switch>
+    </BrowserRouter>    
     </nav>       
+    
     )}
-export default Navbar;
+export default NavBar;

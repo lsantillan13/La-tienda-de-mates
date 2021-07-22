@@ -56,29 +56,5 @@ const Cart = ({ open, onClose }) => {
                 </button>
             </div>
             </div>
-            <div>
-
-            </div>
-            
-
-
-
-        </Container>
-
-    
-
-    )}
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </Container>)}
 export default Cart;
