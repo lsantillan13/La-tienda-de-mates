@@ -1,52 +1,67 @@
-import { BrowserRouter, Switch, Route /*, Link*/ } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React, {useState} from 'react';
 import './App.css';
 import NavBar from './components/Navbar/navBar';
-import Slider from './components/Slider/Slider';
 import Cart  from './components/Cart/Cart';
 import Cartsvg from './assets/img/shopping-cart.svg';
-import TopProducts from './components/TopProducts/TopProducts';
 import Login from "./components/Login/Login";
+/* SECTIONS COMPONENTS*/
+import Combos from './components/Combos/Combos';
+import GiftBox from './components/GiftBox/GiftBox';
+import TopProducts from './components/TopProducts/TopProducts.jsx'
+import Footer from './components/Footer/Footer'
 // import Productos from "./components/Productos";
-// import ItemDetail from './components/ItemDetail/ItemDetail';
+ import ItemDetail from './components/ItemDetail/ItemDetail';
 // import {MyCount} from './components/Contador/Contador';
-function App( props ) { 
+function App(  ) { 
   const [isOpen, setIsOpen] = useState(false)
   return (
   /*INITIAL MAIN TAG FOR ENTIRE APP*/
-
+  <BrowserRouter>
     <main className="App container-fluid">
-      <BrowserRouter>
+    <Switch>
+        <Route exact path="/">  
+      <section className="my-hero-container container-fluid">
+      <div className="my-hero container-fluid"/>
+      </section>
+      
       {/*HEADER PLUS NAV SECTIONS*/}
-      <Switch>
-        <Route exact path="/">
+
         <NavBar>
       <li className="list-item Shopping-cart"><button onClick={() => setIsOpen(true)} className="CartButton"><img className="Cart" src={Cartsvg} alt="shopping-cart-icon"/>Cart</button></li>
       </NavBar>
-      <Slider/>
+
       <Cart open={isOpen} onClose={() => { setIsOpen(false)}}/>
     <TopProducts/>
     {/* <ItemDetail/> */}
+    <Combos/>
+    <GiftBox/>
+    <Footer/>
         </Route>
       </Switch>
       
 
 
 <Switch>   
-   <Route exact path="/Productos" /*component={Catalogue}> */>
-     <main>
-     <NavBar>HOLA</NavBar>
-     </main>
-  </Route>
-  <Route exact path="/Login">
-    <Login>
-    </Login>
-  </Route>
-</Switch>
-</BrowserRouter>
+   <Route path="/detalle-productos" component={NavBar}>
+    <ItemDetail>
+      Hola
 
+    </ItemDetail>
+  </Route>
+  </Switch>
+  <Switch>
+  <Route  path="">
+
+  </Route>
+  </Switch>
+
+
+
+    </main>
+    </BrowserRouter>    
+    )
     
-    </main>);
     
   }
 

@@ -7,7 +7,7 @@
 /* /\/\\/\ */
 /* NAV BAR */
 .navbar-style { z-index: 2; position: fixed ; width: 100%; height: 110px; background-color: #fafafa; display: flex; left: 0;
-   border-bottom: 3px solid #e1e1e1; border-radius: 1%;}
+ border-radius: 1%;}
 /*  LOGO   */
 .brand{z-index: 1;}
 .logo {position: absolute; top: 60px; left: 15%; width: 80px; transform: translate(-50%, -50%); cursor: pointer;}
