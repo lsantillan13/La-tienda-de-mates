@@ -1,0 +1,13 @@
+    [{
+        "id": 0,
+        "image": "./images/0.jpg"
+    },{
+        "id": 1,
+        "image": "./images/1.jpg"
+    },{
+        "id": 2,
+        "image": "../../assets/img/products/2.jpg"
+    },{
+        "id": 3,
+        "image": "../../assets/img/products/3.jpg"
+    }]

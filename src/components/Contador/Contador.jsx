@@ -10,7 +10,7 @@ export default function Contador () {
         <div className="product-ammount-count">
         <button onClick={Restar}>-</button>
         {ArrayNumero.map((Item, ArrayNumero) =>
-        <p>{numero}</p>)}
+        <p key="">{numero}</p>)}
         <button onClick={Agregar}>+</button>
         </div>        
     )

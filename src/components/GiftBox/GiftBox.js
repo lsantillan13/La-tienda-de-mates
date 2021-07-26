@@ -1,40 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './GiftBox.css';
-import image0 from '../../assets/img/products/giftbox0.jpg';
-import image1 from '../../assets/img/products/giftbox1.jpg';
-import image2 from '../../assets/img/products/giftbox2.jpg';
-import image3 from '../../assets/img/products/giftbox3.jpg';
-
-
-const giftbox =[
-    {id: 7,
-    tipo: "GiftBox",
-    forma: null,
-    nombre: "GiftBox 1",
-    descripcion: "Combo con cosas",
-    precio: 2000,
-    imagen: image0},
-    {id: 8,
-    tipo: "GiftBox",
-    forma: null,
-    nombre: "Giftbox 2",
-    descripcion: "Combo con cosas",
-    precio: 2000,
-    imagen: image1},
-    {id: 9,
-    tipo: "GiftBox",
-    forma: null,
-    nombre: "Giftbox 3",
-    descripcion: "Combo con cosas",
-    precio: 2000,
-    imagen: image2},
-    {id: 4,
-    tipo: "GiftBox 4",
-    forma: null,
-    nombre: "GiftBox 4",
-    descripcion: "Combo con cosas",
-    precio: 2000,
-    imagen: image3}]
+import arrayGiftBox from '../../data/productos/itemlist.json'
 
 export default function GiftBox () {
     return (
@@ -48,14 +15,14 @@ export default function GiftBox () {
         {/* MAIN DIV FOR ITEM COLLECTION*/}
         <div className="top-products container-fluid">
         {/* ARRAY MAP*/}
-        {giftbox.map(gift => 
+        {arrayGiftBox.GiftBoxList.map(gift => 
         <div className="product" key={gift.id}>
         <div className="Product--wishlist"/>
-        <a href="/">
+        <Link to={`Productos/${gift.tipo}/${gift.id}`}>
         <div className="product--image-placeholder">
         <img className="product--image" src={gift.imagen} alt=""></img>
         </div>
-        </a>
+        </Link>
         {/* Item Details*/}
         <div className="product--details">
         <div className="product--name"> {gift.nombre}</div>

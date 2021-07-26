@@ -1,38 +1,6 @@
 import React from 'react';
-import image0 from '../../assets/img/products/combo0.jpg';
-import image1 from '../../assets/img/products/combo1.jpg';
-import image2 from '../../assets/img/products/combo2.jpg';
-import image3 from '../../assets/img/products/combo3.jpg';
-
-const ComboMix = [
-    {id: 0,
-    tipo: 'Combo',
-    forma: null,
-    nombre: "Combo 1",
-    descripcion: "Combo",
-    precio: 3000,
-    imagen: image0},
-    {id: 1,
-    tipo: 'Combo',
-    forma: null,
-    nombre: "Combo 2",
-    descripcion: "Combo",
-    precio: 3000,
-    imagen: image1},
-    {id: 2,
-    tipo: 'Combo',
-    forma: null,
-    nombre: "Combo 3",
-    descripcion: "Combo",
-    precio: 3000,
-    imagen: image2},
-    {id: 3,
-    tipo: 'Combo',
-    forma: null,
-    nombre: "Combo 3",
-    descripcion: "Combo",
-    precio: 3000,
-    imagen: image3}]
+import { Link } from 'react-router-dom';
+import arrayCombos from '../../data/productos/itemlist.json'
 
 export default function Combos () {
     return (
@@ -46,14 +14,14 @@ export default function Combos () {
         {/* MAIN DIV FOR ITEM COLLECTION*/}
         <div className="top-products container-fluid">
         {/* ARRAY MAP*/}
-        {ComboMix.map(combo => 
+        {arrayCombos.ComboList.map(combo => 
         <div className="product" key={combo.id}>
         <div className="Product--wishlist"/>
-        <a href="/">
+        <Link to={`Productos/${combo.tipo}/${combo.id}`}>
         <div className="product--image-placeholder">
         <img className="product--image" src={combo.imagen} alt=""></img>
         </div>
-        </a>
+        </Link>
         {/* Item Details*/}
         <div className="product--details">
         <div className="product--name"> {combo.nombre}</div>

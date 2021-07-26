@@ -1,7 +1,9 @@
 
 import React from 'react';
-import './TopProducts.css'
-import Productos from '../../data/productos'
+import { Link } from 'react-router-dom';
+import './TopProducts.css';
+import arrayMates from '../../data/productos/itemlist.json';
+
 const TopProducts = ( { children} ) => {   
     return (
     <section className="section-top-products container-fluid">
@@ -13,19 +15,20 @@ const TopProducts = ( { children} ) => {
             {/* Main DIV For Item Collection*/}
     <div className="top-products container-fluid">
             {/* Array Map */}
-            {Productos.map(Pro => 
-            <div className="product" key={Pro.id}>
+            {arrayMates.MateList.map(mappedMate => 
+            <div className="product" key={mappedMate.id}>
             <div className="product--wishlist"/>
-            <a href="/detalle-productos" className="product-link">
+            <Link to={`Productos/${mappedMate.tipo}/${mappedMate.id}`}>
             <div className="product--image-placeholder">
-            <img className="product--image" src={Pro.imagen} alt={'imagen-de-mate-producto-' + Pro.id}/>
+            <img className="product--image" src={mappedMate.imagen} alt={'imagen-de-mate-producto-' + mappedMate.id}/>
             </div>
-            </a>
+            </Link>
             {/* Item Details */}
             <div className="product--details">
-            <div className="product--name"> {Pro.nombre} </div>
-            <div className="product--info"> {Pro.descripcion}</div>
-            <div className="product--price">{'$' + Pro.precio}</div>
+            <div className="product--name"> {mappedMate.nombre} </div>
+            <div className="product--info"> {mappedMate.descripcion}</div>
+            <div className="product--price">{'$' + mappedMate.precio}</div>
+            {/*ACA TENGO QUE HACER UNA FUNCION PARA AÑADIR AL CARRO Y/O NEW TAB AL CARRITO*/}
             <button className="add-to-cart">Añadir al Carrito</button>
             </div>
             </div>

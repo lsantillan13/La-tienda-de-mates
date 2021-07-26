@@ -1,33 +1,25 @@
 import React from 'react';
 import './ItemDetail.css';
-import ImagenPrueba from "../../assets/img/products/0.jpg";
 import Contador from '../Contador/Contador'
+import { useParams } from 'react-router-dom';
+import ItemList from '../../data/productos/itemlist.json'
 function ItemDetail(){
+    /* DETALLE DE PRODUCTO*/ 
 
-    const Items = [
-        {
-        id: 0,
-        tipo: "Mate personalizado",
-        class: 'mate',
-        nombre: "Mate luego existo",
-        precio: 5000,
-        imagen: ImagenPrueba,
-        descripcion: 'Mate Personalizado "Mate Luego Existo"',
-        sliderimagen: '../imagen-falsa'
-        }
-    ]
+        // console.log(useParams())
+        // const {id} = useParams()
     return(
         <section className="section">
-            {Items.map(MappedItem =>
-            <div className="grid">
+            {ItemList.MateList.map(MappedItem =>
+            <div className="grid" key={MappedItem.id}>
                    <img className="product__image" src={MappedItem.imagen} alt={"imagen-de-producto" + MappedItem.id}/>
-            <div class="product__details">
-                <span class="product__tag"> {MappedItem.tipo} </span>
+            <div className="product__details">
+                <span className="product__tag"> {MappedItem.tipo} </span>
                 <div className="product__name product__title">{MappedItem.nombre}</div>
                 <div className="product__info">{MappedItem.descripcion}</div>
                 <div className="product__price">{'$' + MappedItem.precio}</div>
                 <div className="grid--bottom">
-                    <div class="contador-container">
+                    <div className="contador-container">
                 <Contador/>
                 </div>
                  <span>Cantidad</span>
