@@ -1,19 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import Styled from 'styled-components';
 import './Cart.css';
 import Contador from '../../components/Contador/Contador';
 import '../../components/Contador/Contador.css'
 import { AiOutlineClose } from 'react-icons/ai';
 import {BsBag} from 'react-icons/bs';
 
-const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;    
-`
-
-const Button2dary = styled.button`
+const Button2dary = Styled.button`
 width: 90%; padding: 16px 25%; border-radius: 4px; border: none;
 position: relative; top: 30px; left: 6%; right: 5%;
 color: #fff; border: 0; outline: 2px solid rgba(255,211,0,.5);
@@ -31,7 +24,6 @@ const Cart = ({ open, onClose }) => {
     // const restar = () => {setNumero (numero - 1)}
 
     return (
-        <Container>
            <div className="Cart--popup" >                                             
                 <span className="Cart-popup-container"><BsBag className="Cart-popup-bag-icon"/> 
                 <h2 className="Cart-popup-title">Tu carrito de compras</h2>
@@ -55,6 +47,5 @@ const Cart = ({ open, onClose }) => {
                 <h2 className="alternative-text"> Seguir comprando</h2>
                 </button>
             </div>
-            </div>
-        </Container>)}
+            </div>)}
 export default Cart;

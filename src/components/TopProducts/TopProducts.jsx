@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './TopProducts.css';
-import arrayMates from '../../data/productos/itemlist.json';
+import ArrayMates from '../../data/productos/itemlist.json';
 
 const TopProducts = ( { children} ) => {   
     return (
@@ -14,8 +14,9 @@ const TopProducts = ( { children} ) => {
             </div>
             {/* Main DIV For Item Collection*/}
     <div className="top-products container-fluid">
+
             {/* Array Map */}
-            {arrayMates.MateList.map(mappedMate => 
+            {ArrayMates.MateList.map(mappedMate => 
             <div className="product" key={mappedMate.id}>
             <div className="product--wishlist"/>
             <Link to={`Productos/${mappedMate.tipo}/${mappedMate.id}`}>

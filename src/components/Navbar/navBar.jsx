@@ -5,10 +5,12 @@ import Logo from '../../assets/img/logo.png';
 import User from '../../assets/img/user.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsSearch } from 'react-icons/bs';
+import ItemList from '../../data/productos/itemlist.json';
 
 
 const NavBar = ( { props, children}) => {
 return (
+    <main>
 <nav className="navbar-style container-fluid">
 <Router>
 <NavLink to="/">
@@ -16,10 +18,35 @@ return (
 
 </NavLink>
 <ul className="header--list">
-    <li className="list-item list-item-left active" /*activeClassName="active"*/><Link to="/Sale">SALE</Link></li>
-    <li className="list-item list-item-left" /*activeClassName="active"*/><NavLink to="/Productos">Productos</NavLink></li>
-    <li className="list-item list-item-left" /*activeClassName="active"*/><Link to="/Mayorista"> Mayorista </Link></li>
-    <li className="list-item list-item-left" /*activeClassName="active"*/><Link to="/Tips">Tips</Link></li>
+    <li className="list-item list-item-left active sale" /*activeClassName="active"*/><Link to="/Sale">SALE</Link>
+    </li>
+    <li className="list-item list-item-left products" /*activeClassName="active"*/><NavLink to="/Productos">Productos</NavLink>
+    <div className="subnav">
+        <h2 className="subnav--title">Productos</h2>
+        <div className="subnav-item-container">
+            <ul className="subnav--list">
+        <Link to="/Productos/Categoria/Mates" className="subnav-item">Mates</Link>
+        <Link to="/Productos/Categoria/Yerba" className="subnav-item">Yerba</Link>
+        <Link to="/Productos/Categoria/Tablas" className="subnav-item">Tablas</Link>
+        <Link to="/Productos/Categoria/Blends" className="subnav-item">Blends</Link>
+        <Link to="/Productos/Categoria/Bombillas" className="subnav-item">Bombillas</Link>
+        <Link to="/Productos/Categoria/Combos" className="subnav-item">Combos</Link>
+        <Link to="/Productos/Categoria/Giftbox" className="subnav-item">Cajas de regalo</Link>
+        <Link to="/Productos/Categoria/Bowls" className="subnav-item">Yerberas y Azucareras</Link>
+       </ul>
+       <h2 className="subnav--subtitle">Más vendido</h2>
+       <div className="image-container">
+           <img className="subnav-image" alt={"imagen-producto-destacado"} src={ItemList.MateList[0].imagen}></img>
+       </div>
+       <Link to="/Productos/Todo"><button className="subnav-button">Todos los Productos</button></Link>
+       </div>
+        
+        
+    </div>
+    <div className="overlay"></div>
+    </li>
+    <li className="list-item list-item-left mayorista" /*activeClassName="active"*/><Link to="/Mayorista"> Mayorista </Link></li>
+    <li className="list-item list-item-left tips" /*activeClassName="active"*/><Link to="/Tips">Tips</Link></li>
     <li className="list-item User-login"><Link to="/Login">
     <img className="User" src={User} alt="user-icon-for-login"/>Login</Link>
     </li>
@@ -31,6 +58,8 @@ return (
     <label htmlFor="check"><BsSearch className="search"/></label>
     </div>
     </span>
-    </Router>    
-    </nav>)}
+    </Router>
+    </nav>
+</main>
+    )}
 export default NavBar;

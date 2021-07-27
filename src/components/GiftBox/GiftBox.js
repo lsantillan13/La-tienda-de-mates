@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './GiftBox.css';
-import arrayGiftBox from '../../data/productos/itemlist.json'
+import ArrayGiftBox from '../../data/productos/itemlist.json'
 
 export default function GiftBox () {
     return (
@@ -15,7 +15,7 @@ export default function GiftBox () {
         {/* MAIN DIV FOR ITEM COLLECTION*/}
         <div className="top-products container-fluid">
         {/* ARRAY MAP*/}
-        {arrayGiftBox.GiftBoxList.map(gift => 
+        {ArrayGiftBox.GiftBoxList.map(gift => 
         <div className="product" key={gift.id}>
         <div className="Product--wishlist"/>
         <Link to={`Productos/${gift.tipo}/${gift.id}`}>

@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemDetail.css';
 import Contador from '../Contador/Contador'
 import { useParams } from 'react-router-dom';
 import ItemList from '../../data/productos/itemlist.json'
 function ItemDetail(){
-    /* DETALLE DE PRODUCTO*/ 
+    const [ productos, setProductos ] = React.useState([])
+    React.useEffect(() => {
+        obtenerDatos()
+        
+    },[])
+    
+        const {id} = useParams()
+        function obtenerDatos() {
+        const Productz = ItemList
+        const Mates = ItemList.MateList
+        const Combos = ItemList.ComboList
+        const Gift = ItemList.GiftBoxList
+        setProductos(Mates)
 
-        // console.log(useParams())
-        // const {id} = useParams()
+        const stringed = JSON.stringify(ItemList)
+    }
     return(
+        <main>
+        
+            <div style={{position: 'relative', top: '300px'}}>
+            { id === '0' ? <div> hola </div> : <div> chau </div>}
+            
+            </div>
+
         <section className="section">
-            {ItemList.MateList.map(MappedItem =>
-            <div className="grid" key={MappedItem.id}>
+            {/* {ItemList.MateList.map(MappedItem =>
+            <div className="grid" key={MappedItem.id === "0"}>
                    <img className="product__image" src={MappedItem.imagen} alt={"imagen-de-producto" + MappedItem.id}/>
             <div className="product__details">
                 <span className="product__tag"> {MappedItem.tipo} </span>
@@ -31,9 +50,9 @@ function ItemDetail(){
                     <img className="slider-image-img" src={MappedItem.sliderimagen} alt={"imagen-de-producto" + MappedItem.id}></img>
                 </div>
             </div>
-                )}
+                )} */}
         </section>
-        
+        </main>
     )}
 
 export default ItemDetail

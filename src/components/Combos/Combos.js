@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import arrayCombos from '../../data/productos/itemlist.json'
+import ArrayCombos from '../../data/productos/itemlist.json'
 
 export default function Combos () {
     return (
@@ -14,7 +14,7 @@ export default function Combos () {
         {/* MAIN DIV FOR ITEM COLLECTION*/}
         <div className="top-products container-fluid">
         {/* ARRAY MAP*/}
-        {arrayCombos.ComboList.map(combo => 
+        {ArrayCombos.ComboList.map(combo => 
         <div className="product" key={combo.id}>
         <div className="Product--wishlist"/>
         <Link to={`Productos/${combo.tipo}/${combo.id}`}>

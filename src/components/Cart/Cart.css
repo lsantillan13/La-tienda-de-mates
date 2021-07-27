@@ -1,7 +1,7 @@
 .arrow{ left: 60px; position: relative; background: transparent;}
 .Cart--popup{position: fixed;top: 0; right: 0; width: 500px;height: 100%; z-index: 2;
 background: #fff; border: 1px solid #e3e3e3;}
-.Cart-popup-container{display: flex; font-weight: 500; padding: 15px 0;}
+.Cart-popup-container{position: relative; display: flex; font-weight: 500; padding: 15px 0;}
 .Cart--popup-close-icon{ height: 25px; background-color: transparent; width: 25px; position: inherit; right: 0;}
 .Cart--popup-close-button{width: max-content; height: max-content;border: none; position: inherit; margin-left: 170px}
 .Cart-popup-bag-icon{width: 20px; height: 20px; position: inherit; margin: 0 5px; background-color: #fff;}
@@ -20,3 +20,8 @@ background: #fff; border: 1px solid #e3e3e3;}
 .Cart-popup-product-item-info{ width: 100%; height: 100%; background: green; position: inherit;}
 .Cart-popup-product-item-name{ width: 100%; height: max-content; position: inherit;}
 .item-name{position: absolute;  margin-left: 123px; font-size: 25px;}
+.sc-bdnxRM{
+    position: absolute;
+    width: 505.03px;
+    right: 0;
+}
