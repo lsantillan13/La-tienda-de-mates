@@ -6,17 +6,21 @@
     top: 50px;
 }
 .product__image{
+    top: 400px;
+    position: relative;
+    background: red;
     display: flex;
     left: 0;
     margin: auto;
     width: calc(100% - 65%);
 }
 .product__details{
+    z-index: 4;
     background: #fafafa;
     font-size: 1.4em;
     position: relative;
     left: 1020px;
-    bottom: 500px;
+    top: 150px;
     height: 190px;
     width: 450px;
     text-align: center;   
