@@ -12,8 +12,9 @@ import Footer from './components/Footer/Footer'
 import ItemDetail from './components/ItemDetail/ItemDetail';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 /**/
-import data from './data/productos/Data.js' 
-import Basket from './components/Basket/Basket'
+import data from './data/productos/Data.js';
+import Basket from './components/Basket/Basket';
+import productoDetalle from './components/ItemDetailContainer/ItemDetailContainer';
 // import {MyCount} from './components/Contador/Contador';
 function App() { 
   const {products} = data;
@@ -30,43 +31,43 @@ function App() {
       else{setCartItems(cartItems.map(x => x.id === product.id ? {...exist, qty: exist.qty -1} : x))}
     }
 
+
   return (
   <Router>
     <main className="App container-fluid">
-      <Route exact path="/">  
+      <Route path="/" exact>  
         <section className="my-hero-container container-fluid">
           <div className="my-hero container-fluid"/>
         </section>
         <NavBar/>
         <div className="row">
-      <Cart onAdd={onAdd} products={products}></Cart>
-      <Basket style={{position: 'relative'}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}>  </Basket>
+      {/* <Cart onAdd={onAdd} products={products}></Cart>
+      <Basket style={{position: 'relative'}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}>  </Basket> */}
       </div>
         <TopProducts />
         {/* <ItemDetail/> */}
         <Combos/>
 
         <GiftBox/>
-        <ItemDetailContainer> <ItemDetail></ItemDetail> </ItemDetailContainer>
         {/* <Footer/> */}
       </Route>
 
     {/*MATES*/}
     <Switch>
       <Route path="/Productos/Mate/:id">
-        <NavBar/><ItemDetail/><Footer/>
+      <NavBar/><ItemDetailContainer/><Footer/>
       </Route>
     </Switch>
     {/*COMBOS*/}
     <Switch>
       <Route path="/Productos/Combo/:id">
-        <NavBar/><ItemDetail/><Footer/>
+        <NavBar/><ItemDetailContainer/><Footer/>
       </Route>
     </Switch>
     {/*GIFTBOX*/}
     <Switch>
       <Route path="/Productos/GiftBox/:id">
-        <NavBar/><ItemDetail/><Footer/>
+        <NavBar/><ItemDetailContainer/><Footer/>
       </Route>
     </Switch>
 

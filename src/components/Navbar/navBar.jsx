@@ -13,12 +13,10 @@ const NavBar = ( { props}) => {
 
 return (
     <main>
-<nav className="navbar-style container-fluid">
 <Router>
-<NavLink to="/">
-<img className="logo" src={Logo} alt=""/>
+<nav className="navbar-style container-fluid">
 
-</NavLink>
+<img className="logo" src={Logo} alt=""/>
 <ul className="header--list">
     <li className="list-item list-item-left active sale" /*activeClassName="active"*/><Link to="/Sale">SALE</Link></li>
     <li className="list-item list-item-left products" /*activeClassName="active"*/><NavLink to="/Productos">Productos</NavLink>
@@ -63,8 +61,9 @@ return (
     <label htmlFor="check"><BsSearch className="search"/></label>
     </div>
     </span>
-    </Router>
+
     </nav>
+    </Router>
 </main>
     )}
 export default NavBar;

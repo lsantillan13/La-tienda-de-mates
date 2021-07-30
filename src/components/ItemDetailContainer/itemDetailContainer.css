@@ -1,0 +1,10 @@
+.div{
+    position: absolute;
+    top: 400px;
+    margin: auto;
+    left: 400px;
+    
+}
+.div h1{
+    font-size: 5em;
+}
