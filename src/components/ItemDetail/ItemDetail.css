@@ -15,7 +15,6 @@
     width: calc(100% - 65%);
 }
 .product__details{
-    z-index: 4;
     background: #fafafa;
     font-size: 1.4em;
     position: relative;

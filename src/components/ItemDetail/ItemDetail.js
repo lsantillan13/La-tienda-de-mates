@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ItemDetail.css';
 import Contador from '../Contador/Contador'
 import { useParams } from 'react-router-dom';
-import ItemList from '../../data/productos/itemlist.json'
+// import ItemList from '../../data/productos/itemlist.json'
 import myArr from '../../data/productos/myArr.json'
 function ItemDetail( props ){
+    
     const {id} = useParams()
+
         const Productz = myArr.Products
-        //  const product = myArr.Products.find( x => x.id === id);
-        //  if(!Productz){
-        //     return <h1 stlye={{position: 'relative' , top: '40px'}}> Product {Productz[id].id} Not found </h1>
-        //  }
     return(
-        <main>
         <section className="section">
             <div className="grid">
             <img className="product__image" src={Productz[id].imagen} alt={`imagen-de-producto ${Productz[id].id}`}/>
@@ -35,7 +32,6 @@ function ItemDetail( props ){
                 </div>
             </div>
         </section>
-        </main>
     )}
 
 export default ItemDetail

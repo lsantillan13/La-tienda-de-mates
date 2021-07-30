@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ArrayCombos from '../../data/productos/itemlist.json'
 
-export default function Combos () {
+export default function Combos ( props ) {
+    const {onAdd} = props;
     return (
     /*MAIN SECTION FOR ENTIRE COMPONENT*/
     <section className="section-combos container-fluid" style={{position: 'relative', top: '75vh'}}>
@@ -27,7 +28,7 @@ export default function Combos () {
         <div className="product--name"> {combo.nombre}</div>
         <div className="product--info">{combo.descripcion}</div>
         <div className="product--price">{combo.precio}</div>
-        <button className="add-to-cart">Añadir al Carrito</button>
+        <button onClick={onAdd} className="add-to-cart">Añadir al Carrito</button>
         </div>
 
         </div>

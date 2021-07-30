@@ -5,10 +5,12 @@ import Logo from '../../assets/img/logo.png';
 import User from '../../assets/img/user.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsSearch } from 'react-icons/bs';
+import Cartsvg from '../../assets/img/shopping-cart.svg';
 import ItemList from '../../data/productos/itemlist.json';
 
 
-const NavBar = ( { props, children}) => {
+const NavBar = ( { props}) => {
+
 return (
     <main>
 <nav className="navbar-style container-fluid">
@@ -18,8 +20,7 @@ return (
 
 </NavLink>
 <ul className="header--list">
-    <li className="list-item list-item-left active sale" /*activeClassName="active"*/><Link to="/Sale">SALE</Link>
-    </li>
+    <li className="list-item list-item-left active sale" /*activeClassName="active"*/><Link to="/Sale">SALE</Link></li>
     <li className="list-item list-item-left products" /*activeClassName="active"*/><NavLink to="/Productos">Productos</NavLink>
     <div className="subnav">
         <h2 className="subnav--title">Productos</h2>
@@ -47,12 +48,16 @@ return (
     </li>
     <li className="list-item list-item-left mayorista" /*activeClassName="active"*/><Link to="/Mayorista"> Mayorista </Link></li>
     <li className="list-item list-item-left tips" /*activeClassName="active"*/><Link to="/Tips">Tips</Link></li>
-    <li className="list-item User-login"><Link to="/Login">
+    <li className="list-item User-login"><Link to="/Login" className="algo">
     <img className="User" src={User} alt="user-icon-for-login"/>Login</Link>
+    </li>
+
+    <li className="list-item Shopping-cart">
+    <button><img className="Cart" src={Cartsvg} alt="shopping-cart-icon"/>Cart</button>
+    
     </li>
 </ul>
     <span className="container search-container">
-    {children}
     <div className="box">
     <input type="text" placeholder="¿Qué estas buscando?"/>
     <label htmlFor="check"><BsSearch className="search"/></label>
