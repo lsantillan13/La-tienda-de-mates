@@ -1,0 +1,131 @@
+main .section {
+    width: 100%;
+    height: 90.0vh;
+    background: #d9d9d9;
+}
+
+.product__image-container {
+    width: 550px;
+    position: absolute;
+    height: 525px;
+    background: transparent;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    left: 400px;
+    top: 140px;}
+
+.product__image-container img {
+width: max-content;
+
+}
+
+.product__details {
+    background: #fafafa;
+    font-size: 1.4em;
+    position: absolute;
+    top: 158px;
+    right: 0;
+    margin: 0 65px;
+    height: 190px;
+    width: 450px;
+}
+
+.product__title {
+    font-weight: 900;
+    font-size: 1.1em;
+    top: 50px;
+    margin: 0 25px;
+    float: left;
+    position: absolute;
+}
+
+.product__tag {
+    position: relative;
+    left: 25px;
+    top: 15px;
+    float: left;
+    background-color: #2f2e3c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    padding: 4px 25px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    -webkit-clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+
+.product__info {
+    font-size: .8em;
+    float: left;
+    padding: 55px 25px;
+}
+
+.product__price {
+    padding: 0 25px;
+    font-weight: 900;
+    font-size: 1em;
+    bottom: 45px;
+    position: relative;
+    float: left;
+}
+
+.grid--bottom {
+    width: 100%;
+    height: 200px;
+    top: 195px;
+    background: #fafafa;
+    position: inherit;
+}
+
+.grid--bottom span {
+    font-size: .7em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: palevioletred;
+    position: initial;
+    margin: 0 15px;
+}
+
+
+.Item-detail-add-to-cart {
+    font-size: .75em;
+    position: relative;
+    width: max-content;
+    padding: 16px 25%;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    outline: 2px solid rgba(255, 211, 0, .5);
+    outline-offset: -2px;
+    margin: 0 35px;
+    background: linear-gradient(90deg, #ffd300 0%, #d41e33 100%);
+}
+
+.slider-image {
+    position: relative;
+    height: 100%;
+    width: 400px;
+    background: transparent;
+    top: 0;
+    display: block;
+    text-align: center;
+    font-size: .9em;
+}
+
+.slider-image-img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 125px;
+    margin: 50px 100px;
+    padding: 50px 25px;
+    background: #fafafa;
+}
+
+.slider-image-img:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}

@@ -1,14 +1,13 @@
 import React from 'react';
 import './ItemDetail.css';
-import { useParams } from 'react-router';
 function ItemDetail( props ){
-    const {id} = useParams()
     const {item} = props;
     return(
-        <section className="section row">
-            <div className="grid">
-            {console.log(item)}
-            <img className="product__image" src={item.imagen} alt={`imagen-de-producto ${item.id}`}/>
+        
+        <main className="section container-fluid">
+            <div className="product__image-container">
+                <img className="product__image" src={item.imagen} alt={`imagen-de-producto ${item.id}`}/>
+            </div>
             <div className="product__details">
                 <span className="product__tag"> {item.tipo} </span>
                 <div className="product__name product__title">{item.nombre}</div>
@@ -19,14 +18,14 @@ function ItemDetail( props ){
                 </div>
                  <span>Cantidad</span>
             </div>
+            {/*aca el counter*/}
             <button className="Item-detail-add-to-cart">Añadir al Carrito</button>
                 </div>
                 <div className="slider-image">
                     <img className="slider-image-img" alt={`imagen-de-producto ${item.id}`}></img>
                     <img className="slider-image-img"  alt={`imagen-de-producto ${item.id}`}></img>
                 </div>
-            </div>
-        </section>
+        </main>
     )}
 
 export default ItemDetail

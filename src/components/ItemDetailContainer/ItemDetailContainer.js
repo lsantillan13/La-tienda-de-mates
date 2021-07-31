@@ -1,11 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router';
-/*CHILD COMPONENT*/
-import ItemDetail from '../ItemDetail/ItemDetail';
-/*ARRAY*/
+import ItemDetail from './ItemDetail/ItemDetail';
 import data from '../../data/productos/Data';
-/*STYLING*/
-import './itemDetailContainer.css'
+
 export default function ItemDetailContainer( props ){
     const {id} = useParams()
     return(

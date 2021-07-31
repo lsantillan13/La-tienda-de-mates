@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ArrayCombos from '../../data/productos/itemlist.json'
+import ArrayCombos from '../../../data/productos/itemlist.json'
 
 export default function Combos ( props ) {
     const {onAdd} = props;
     return (
     /*MAIN SECTION FOR ENTIRE COMPONENT*/
-    <section className="section-combos container-fluid" style={{position: 'relative', top: '75vh'}}>
+    <section className="section-combos container-fluid" style={{position: 'relative', top: '80vh'}}>
         {/*TITLE CONTAINER*/}    
         <div className="title title-container">
             <h2 className="title-main-title">La Tienda de Mates</h2>

@@ -14,7 +14,7 @@ const data = {
         nombre: "Mate Mandala",
         descripcion: "Mate con forma de Huevo más Azucarera pintados con mandalas",
         precio: 1200,
-        imagen: "",
+        imagen: "https://i.im.ge/2021/07/31/LQr6m.jpg",
         stock: 5
         },{
         id: "2",

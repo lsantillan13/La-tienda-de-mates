@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './GiftBox.css';
-import ArrayGiftBox from '../../data/productos/itemlist.json'
+import ArrayGiftBox from '../../../data/productos/itemlist.json';
 
 export default function GiftBox () {
     return (
     /*MAIN SECTION FOR ENTIRE COMPONENT*/
-    <section className="section-combos container-fluid" style={{position: 'relative', top: '100vh'}}>
+    <main className="section-giftbox container-fluid">
         {/*TITLE CONTAINER*/}    
         <div className="title title-container">
             <h2 className="title-main-title">La Tienda de Mates</h2>
@@ -33,6 +33,5 @@ export default function GiftBox () {
         
         </div>
         )}
-
         </div>
-    </section>)}
+    </main>)}

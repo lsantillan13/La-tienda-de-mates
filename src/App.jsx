@@ -5,16 +5,14 @@ import NavBar from './components/Navbar/navBar';
 import Cart  from './components/Cart/Cart';
 // import Login from "./components/Login/Login";
 /* SECTIONS COMPONENTS*/
-import Combos from './components/Combos/Combos';
-import GiftBox from './components/GiftBox/GiftBox';
-import TopProducts from './components/TopProducts/TopProducts.jsx'
-import Footer from './components/Footer/Footer'
-import ItemDetail from './components/ItemDetail/ItemDetail';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Combos from './Pages/Home/Combos/Combos';
+import GiftBox from './Pages/Home/GiftBox/GiftBox';
+import TopProducts from './Pages/Home/TopProducts/TopProducts';
+import Footer from './components/Footer/Footer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 /**/
 import data from './data/productos/Data.js';
 import Basket from './components/Basket/Basket';
-import productoDetalle from './components/ItemDetailContainer/ItemDetailContainer';
 // import {MyCount} from './components/Contador/Contador';
 function App() { 
   const {products} = data;
@@ -45,9 +43,7 @@ function App() {
       <Basket style={{position: 'relative'}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}>  </Basket> */}
       </div>
         <TopProducts />
-        {/* <ItemDetail/> */}
         <Combos/>
-
         <GiftBox/>
         {/* <Footer/> */}
       </Route>
