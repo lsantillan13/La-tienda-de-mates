@@ -127,3 +127,9 @@ outline: 1px solid black;}
 
    /*VER LINKS ON HOVER*/
    
+.brand{
+   position: absolute;
+   font-size: 1.7em;
+   width: max-content;
+   top: 50px;
+}

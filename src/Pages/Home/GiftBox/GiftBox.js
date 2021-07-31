@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './GiftBox.css';
 import ArrayGiftBox from '../../../data/productos/itemlist.json';
+/*CAMBIAR ARRAY COMBOS POR /DATA Y CREAR FILTER PARA GIFTBOX */
 
-export default function GiftBox () {
+function GiftBox () {
     return (
     /*MAIN SECTION FOR ENTIRE COMPONENT*/
-    <main className="section-giftbox container-fluid">
+    <section className="section-giftbox container-fluid">
         {/*TITLE CONTAINER*/}    
         <div className="title title-container">
             <h2 className="title-main-title">La Tienda de Mates</h2>
@@ -18,7 +19,7 @@ export default function GiftBox () {
         {ArrayGiftBox.GiftBoxList.map(gift => 
         <div className="product" key={gift.id}>
         <div className="Product--wishlist"/>
-        <Link to={`Productos/${gift.tipo}/${gift.id}`}>
+        <Link to={`Item/${gift.id}`}>
         <div className="product--image-placeholder">
         <img className="product--image" src={gift.imagen} alt=""></img>
         </div>
@@ -34,4 +35,6 @@ export default function GiftBox () {
         </div>
         )}
         </div>
-    </main>)}
+    </section>)}
+
+export default GiftBox;

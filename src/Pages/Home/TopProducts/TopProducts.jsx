@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './TopProducts.css'
 import ArrayMates from '../../../data/productos/itemlist.json';
+/*CAMBIAR ARRAY COMBOS POR /DATA Y CREAR FILTER PARA TOP PRODUCTS */
 
 const TopProducts = ( { children} ) => {   
     return (
@@ -19,7 +20,7 @@ const TopProducts = ( { children} ) => {
             {ArrayMates.MateList.map(mappedMate => 
             <div className="product" key={mappedMate.id}>
             <div className="product--wishlist"/>
-            <Link to={`Productos/${mappedMate.tipo}/${mappedMate.id}`}>
+            <Link to={`Item/${mappedMate.id}`}>
             <div className="product--image-placeholder">
             <img className="product--image" src={mappedMate.imagen} alt={'imagen-de-mate-producto-' + mappedMate.id}/>
             </div>

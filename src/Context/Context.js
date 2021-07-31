@@ -1,8 +1,10 @@
 import React, {createContext} from 'react'
 
-export const Context = createContext();
+const Context = createContext();
 
 
 const CartContext = ({children}) => {
 
 }
+
+export default createContext;

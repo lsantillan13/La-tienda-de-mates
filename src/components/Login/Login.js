@@ -3,7 +3,7 @@ import Navbar  from '../Navbar/navBar';
 import {GrInstagram} from 'react-icons/gr';
 import './Login.css';
 
-export default function Login() {
+function Login() {
     return(
         <main>
             <Navbar></Navbar>
@@ -25,3 +25,4 @@ export default function Login() {
             </section>
         </main>
     )}
+export default Login;

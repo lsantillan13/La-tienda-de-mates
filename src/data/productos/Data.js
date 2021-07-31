@@ -108,17 +108,22 @@ const data = {
     ],
 };
 
-export default data;
+export {data};
 
+// export function esMate () {
+//     return data.products.filter(x => {
+//         return x.tipo.includes('Mate');
+//     })
+// }
 
+// export const esCombo = tipo => {
+//     return data.products.filter(x => {
+//         return x.tipo.includes('Combo');
+//     })
+// }
 
-
-
-
-
-
-
-
-
-// 
-// 
+// export const esGiftBox = tipo => {
+//     return data.products.filter(x => {
+//         return x.tipo.includes('GiftBox');
+//     })
+// }

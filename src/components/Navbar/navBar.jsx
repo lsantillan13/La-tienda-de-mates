@@ -1,7 +1,6 @@
-import { BrowserRouter as Router, Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import React from "react";
 import "./navbar.css";
-import Logo from '../../assets/img/logo.png';
 import User from '../../assets/img/user.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsSearch } from 'react-icons/bs';
@@ -13,25 +12,26 @@ const NavBar = ( { props}) => {
 
 return (
     <main>
-<Router>
-<nav className="navbar-style container-fluid">
 
-<img className="logo" src={Logo} alt=""/>
+<nav className="navbar-style container-fluid">
+<Link to={`/`}>
+<h1 className="brand">La Tienda de Mates</h1>
+</Link>
 <ul className="header--list">
     <li className="list-item list-item-left active sale" /*activeClassName="active"*/><Link to="/Sale">SALE</Link></li>
-    <li className="list-item list-item-left products" /*activeClassName="active"*/><NavLink to="/Productos">Productos</NavLink>
+    <li className="list-item list-item-left products" /*activeClassName="active"*/><Link to="/Productos">Productos</Link>
     <div className="subnav">
         <h2 className="subnav--title">Productos</h2>
         <div className="subnav-item-container">
             <ul className="subnav--list">
-        <Link to="/Productos/Categoria/Mates" className="subnav-item">Mates</Link>
-        <Link to="/Productos/Categoria/Yerba" className="subnav-item">Yerba</Link>
-        <Link to="/Productos/Categoria/Tablas" className="subnav-item">Tablas</Link>
-        <Link to="/Productos/Categoria/Blends" className="subnav-item">Blends</Link>
-        <Link to="/Productos/Categoria/Bombillas" className="subnav-item">Bombillas</Link>
-        <Link to="/Productos/Categoria/Combos" className="subnav-item">Combos</Link>
-        <Link to="/Productos/Categoria/Giftbox" className="subnav-item">Cajas de regalo</Link>
-        <Link to="/Productos/Categoria/Bowls" className="subnav-item">Yerberas y Azucareras</Link>
+        <Link to="/Category/:CategoryId" className="subnav-item">Mates</Link>
+        <Link to="/Category/:CategoryId" className="subnav-item">Yerba</Link>
+        <Link to="/Category/:CategoryId" className="subnav-item">Blends</Link>
+        <Link to="/Category/:CategoryId" className="subnav-item">Tablas</Link>
+        <Link to="/Category/:CategoryId" className="subnav-item">Bombillas</Link>
+        <Link to="/Category/:CategoryId" className="subnav-item">Combos</Link>
+        <Link to="/Category/:CategoryId" className="subnav-item">Cajas de regalo</Link>
+        <Link to="/Category/:CategoryId" className="subnav-item">Yerberas y Azucareras</Link>
        </ul>
        <h2 className="subnav--subtitle">Más vendido</h2>
        <div className="image-container">
@@ -63,7 +63,7 @@ return (
     </span>
 
     </nav>
-    </Router>
+
 </main>
     )}
 export default NavBar;

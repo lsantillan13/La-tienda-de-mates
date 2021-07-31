@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ArrayCombos from '../../../data/productos/itemlist.json'
+/*CAMBIAR ARRAY COMBOS POR /DATA Y CREAR FILTER PARA COMBOS */
 
-export default function Combos ( props ) {
+function Combos ( props ) {
     const {onAdd} = props;
     return (
     /*MAIN SECTION FOR ENTIRE COMPONENT*/
-    <section className="section-combos container-fluid" style={{position: 'relative', top: '80vh'}}>
+    <section className="section-combos container-fluid">
         {/*TITLE CONTAINER*/}    
         <div className="title title-container">
             <h2 className="title-main-title">La Tienda de Mates</h2>
@@ -18,7 +19,7 @@ export default function Combos ( props ) {
         {ArrayCombos.ComboList.map(combo => 
         <div className="product" key={combo.id}>
         <div className="Product--wishlist"/>
-        <Link to={`Productos/${combo.tipo}/${combo.id}`}>
+        <Link to={`item/${combo.id}`}>
         <div className="product--image-placeholder">
         <img className="product--image" src={combo.imagen} alt=""></img>
         </div>
@@ -36,3 +37,4 @@ export default function Combos ( props ) {
         {/*SHOULD CLOSE ARRAY MAP HERE*/}
         </div>
     </section>)}
+export default Combos;

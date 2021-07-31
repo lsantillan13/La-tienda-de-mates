@@ -1,18 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import './App.css';
-import NavBar from './components/Navbar/navBar';
-import Cart  from './components/Cart/Cart';
-// import Login from "./components/Login/Login";
-/* SECTIONS COMPONENTS*/
-import Combos from './Pages/Home/Combos/Combos';
-import GiftBox from './Pages/Home/GiftBox/GiftBox';
-import TopProducts from './Pages/Home/TopProducts/TopProducts';
-import Footer from './components/Footer/Footer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 /**/
-import data from './data/productos/Data.js';
 import Basket from './components/Basket/Basket';
+import {data} from './data/productos/Data.js';
+import Default  from './Pages/Default/Default';
+import ItemDetailMain from './components/ItemDetailContainer/ItemDetailContainer';
+import {MatesContainer} from './Pages/Productos/Mates'
+/**/
+// import Cart  from './components/Cart/Cart';
+// import Login from "./components/Login/Login";
 // import {MyCount} from './components/Contador/Contador';
 function App() { 
   const {products} = data;
@@ -26,60 +23,32 @@ function App() {
     const onRemove = ( product) => {
       const exist = cartItems.find((x) => x.id === product.id);
       if(exist.qty === 1){ setCartItems(cartItems.filter((x) => x.id !== product.id))}
-      else{setCartItems(cartItems.map(x => x.id === product.id ? {...exist, qty: exist.qty -1} : x))}
-    }
-
+      else{setCartItems(cartItems.map(x => x.id === product.id ? {...exist, qty: exist.qty -1} : x))}}
 
   return (
-  <Router>
-    <main className="App container-fluid">
-      <Route path="/" exact>  
-        <section className="my-hero-container container-fluid">
-          <div className="my-hero container-fluid"/>
-        </section>
-        <NavBar/>
-        <div className="row">
-      {/* <Cart onAdd={onAdd} products={products}></Cart>
-      <Basket style={{position: 'relative'}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}>  </Basket> */}
-      </div>
-        <TopProducts />
-        <Combos/>
-        <GiftBox/>
-        {/* <Footer/> */}
-      </Route>
-
-    {/*MATES*/}
-    <Switch>
-      <Route path="/Productos/Mate/:id">
-      <NavBar/><ItemDetailContainer/><Footer/>
-      </Route>
-    </Switch>
-    {/*COMBOS*/}
-    <Switch>
-      <Route path="/Productos/Combo/:id">
-        <NavBar/><ItemDetailContainer/><Footer/>
-      </Route>
-    </Switch>
-    {/*GIFTBOX*/}
-    <Switch>
-      <Route path="/Productos/GiftBox/:id">
-        <NavBar/><ItemDetailContainer/><Footer/>
-      </Route>
-    </Switch>
-
-    <Switch>
-      <Route path="/Productos/Todo" exact>
-      <NavBar/>
-
-      </Route>
-    </Switch>
+  <div className="App">
+      {/* MY APP COMPONENT */}
+  <Switch>
+    <Route exact path="/" component={Default}/>
+    <Route exact path="/item/:id" component={ItemDetailMain}/>
+    <Route exact path="/item/:id" component={ItemDetailMain}/>
+    <Route exact path="/item/:id" component={ItemDetailMain}/>
+    <Route exact path="/category/:categoryId" component={MatesContainer}/> 
+  </Switch>
 
 
-    </main>
-  </Router>    
-    )}
 
 
+
+
+
+
+
+
+
+
+
+  </div>)}
 export default App;
 
 

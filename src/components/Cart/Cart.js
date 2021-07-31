@@ -1,7 +1,7 @@
 import React from 'react'
 import Product from '../Product/Product'
 
-export default function Cart(props) {
+function Cart(props) {
   const {products, onAdd} = props; 
   return (
 <main className="block col-2" style={{position: 'relative', top: '150px', width: '100%', height: '100%', background: '#fff'}}>
@@ -15,3 +15,5 @@ export default function Cart(props) {
 </main>
   )
 }
+
+export default Cart;

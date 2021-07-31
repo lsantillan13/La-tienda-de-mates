@@ -1,6 +1,17 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.section-combos{
+    background: #fafafa;
+    /* background: #fafafa; */
+    position: relative;
+    top: 90vh;}
 .section-giftbox{
     position: relative;
-    top: 90vh;
+    background: #fafafa;
+    top: 75vh;
     width: 100%;
     height: 100%;
 }
