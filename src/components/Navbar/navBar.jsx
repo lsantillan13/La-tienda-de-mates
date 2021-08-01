@@ -37,7 +37,7 @@ return (
        <div className="image-container">
            <img className="subnav-image" alt={"imagen-producto-destacado"} src={ItemList.MateList[0].imagen}></img>
        </div>
-       <Link to="/Productos/Todo"><button className="subnav-button">Todos los Productos</button></Link>
+       <Link to="/Productos/Todos los productos"><button className="subnav-button">Todos los Productos</button></Link>
        </div>
         
         

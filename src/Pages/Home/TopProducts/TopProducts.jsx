@@ -5,7 +5,7 @@ import './TopProducts.css'
 import ArrayMates from '../../../data/productos/itemlist.json';
 /*CAMBIAR ARRAY COMBOS POR /DATA Y CREAR FILTER PARA TOP PRODUCTS */
 
-const TopProducts = ( { children} ) => {   
+const TopProducts = ( { children} ) => {
     return (
     <section className="section-top-products container-fluid">
             {/* Title Container */}

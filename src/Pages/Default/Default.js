@@ -4,7 +4,7 @@ import Combos from '../Home/Combos/Combos';
 import GiftBox from '../Home/GiftBox/GiftBox';
 import TopProducts from '../Home/TopProducts/TopProducts';
 
-function Default (){
+function Default (props){
     return(
         <main className="App">
             <section className="my-hero-container container-fluid">
