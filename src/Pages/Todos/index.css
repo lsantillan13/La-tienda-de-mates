@@ -1,0 +1,26 @@
+/* MAIN CONTAINER */
+.Allprods-main{
+    position: relative;
+    height: 185vh;
+    width: 100%;
+}
+/*CONTAINER DEL CARRITO A LA DERECHA*/
+.Cart-Container {
+    width: 400px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 3;
+    background: #fff;
+    
+}
+
+/*PRODUCT LIST CONTAINER */
+.product-list-container{
+    z-index: 1;
+    position: relative;
+    top: 111px;
+    width: 100%;
+
+}

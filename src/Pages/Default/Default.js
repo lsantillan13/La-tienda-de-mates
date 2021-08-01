@@ -11,7 +11,6 @@ function Default (){
             <div className="my-hero container-fluid"/>
             </section>
             <NavBar/><TopProducts/><Combos/><GiftBox/>
-            {/* <Cart onAdd={onAdd} products={products}></Cart>
-<Basket style={{position: 'relative'}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}>  </Basket> */}
         </main>)}
 export default Default;
+

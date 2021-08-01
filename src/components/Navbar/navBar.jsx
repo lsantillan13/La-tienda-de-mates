@@ -19,7 +19,7 @@ return (
 </Link>
 <ul className="header--list">
     <li className="list-item list-item-left active sale" /*activeClassName="active"*/><Link to="/Sale">SALE</Link></li>
-    <li className="list-item list-item-left products" /*activeClassName="active"*/><Link to="/Productos">Productos</Link>
+    <li className="list-item list-item-left products" /*activeClassName="active"*/><Link to="/Productos/Todos los productos">Productos</Link>
     <div className="subnav">
         <h2 className="subnav--title">Productos</h2>
         <div className="subnav-item-container">

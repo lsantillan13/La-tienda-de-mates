@@ -1,4 +1,5 @@
 import React from 'react';
+import './Basket.css';
 
 function Basket (props) {
     const {cartItems, onAdd, onRemove} = props;
@@ -7,13 +8,13 @@ function Basket (props) {
     const shippingPrice = itemsPrice > 2000 ? 0: 50;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
     return (
-        <aside className="block col-2"  style={{position: 'relative', left: '900px', bottom: '430vh'}}>
-            <h2 style={{position: 'relative'}}>HOLA</h2>
+        <div className="">
+            <p style={{position: 'relative'}}><strong>En tu carrito 0</strong></p>
             <div>
                 {cartItems.length === 0 && <div>Cart is Empty</div>}
             </div>
             {cartItems.map((item) => (
-                <div key={item.id} className='row'>
+                <div key={item.id} className='row' style={{position: 'relative'}}>
                     <div>{item.nombre}</div>
                     <div>
                         <button onClick={() =>onAdd(item)} className="add">+</button>
@@ -45,7 +46,7 @@ function Basket (props) {
                     </div>
                 </>
             )}
-        </aside>
+        </div>
     )
 }
 
