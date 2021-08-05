@@ -4,21 +4,21 @@ import './Basket.css';
 function CartView (props) {
     const {cartItems, onAdd, onRemove} = props;
     const itemsPrice = cartItems.reduce((a,c) =>  a + c.precio * c.qty, 0)
-    const taxPrice = itemsPrice * 0.21;
-    const shippingPrice = itemsPrice > 2000 ? 0: 50;
-    const totalPrice = itemsPrice + taxPrice + shippingPrice;
+    // const taxPrice = itemsPrice * 0.21;
+    // const shippingPrice = itemsPrice > 2000 ? 0: 50;
+    // const totalPrice = itemsPrice + taxPrice + shippingPrice;
     return (
         <div className="Cart-view-container">
             <div className="Cart-view-popup-top">
             <p style={{position: 'relative'}}><strong>En tu carrito (0)</strong></p>
             </div>
             <div className="Cart-view-status">
-                {cartItems.length === 0 && <div className="empty-img"><img src="https://th.bing.com/th/id/OIP.pdR1EBlUfZE2_dt2EIX6VgHaGw?pid=ImgDet&rs=1"/></div>}
+                {cartItems.length === 0 && <div className="empty-img"><img src="https://th.bing.com/th/id/OIP.pdR1EBlUfZE2_dt2EIX6VgHaGw?pid=ImgDet&rs=1" alt="imagen-carrito-vacio"/></div>}
             </div>
             {cartItems.map((item) => (
                 <div className="Cart-view-item-container" key={item.id}>
                     <div className='Cart-view-item-name'>{item.nombre}</div>
-                    <div className="Cart-view-img-container"><img src={item.imagen}></img></div>
+                    <div className="Cart-view-img-container"><img src={item.imagen} alt={item.nombre}/></div>
                     
                     <div className="Cart-view-buttons">
                         <button onClick={() =>onAdd(item)} className="add">+</button>

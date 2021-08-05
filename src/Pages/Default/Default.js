@@ -1,16 +1,19 @@
 import React from 'react';
 import NavBar from '../../components/Navbar/navBar';
-import Combos from '../Home/Combos/Combos';
-import GiftBox from '../Home/GiftBox/GiftBox';
-import TopProducts from '../Home/TopProducts/TopProducts';
+import ItemContainer from '../../components/ItemContainer/ItemContainer';
+// import {database} from "../../Firebase/Firebase";
+
+
 
 function Default (props){
+
     return(
         <main className="App">
+             <NavBar/>
             <section className="my-hero-container container-fluid">
             <div className="my-hero container-fluid"/>
+            <ItemContainer/>
             </section>
-            <NavBar/><TopProducts/><Combos/><GiftBox/>
         </main>)}
 export default Default;
 

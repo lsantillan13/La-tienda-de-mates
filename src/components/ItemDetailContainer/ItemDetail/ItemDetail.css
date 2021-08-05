@@ -85,14 +85,14 @@ width: max-content;
     text-transform: uppercase;
     font-weight: 900;
     color: palevioletred;
-    position: initial;
-    margin: 0 15px;
+    position: relative;
+    left: 38%;
 }
 
 
-.Item-detail-add-to-cart {
+.Item-detail-add-to-cart, .visible {
     font-size: .75em;
-    position: relative;
+    position: absolute;
     width: max-content;
     padding: 16px 25%;
     border-radius: 4px;
@@ -102,6 +102,10 @@ width: max-content;
     outline-offset: -2px;
     margin: 0 35px;
     background: linear-gradient(90deg, #ffd300 0%, #d41e33 100%);
+    display: none;
+    top: 330px;}
+.invisible{
+    display: none;
 }
 
 .slider-image {
@@ -128,4 +132,71 @@ width: max-content;
 .slider-image-img:hover {
     border: 1px solid black;
     cursor: pointer;
+}
+
+.counter{
+    margin: auto;
+    left: 0;
+    position: relative;
+    top: 240px;
+    width: 270px;
+    height: 70px;
+}
+
+.Counter-buttons{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+}
+.Counter-buttons button{
+    left: 10%;
+    background: blue;
+    height: min-content;
+    position: relative;
+    width: max-content;
+    margin: 0 30px;
+    padding: 1px 2px;
+    background:transparent;
+}
+.Counter-buttons button p{
+    font-size: 2em;
+}
+.Counter-buttons button:hover{
+    outline: 1px solid gray
+}
+.Counter-buttons p{
+    font-size: 2em;
+    position: relative;
+    margin: 0 10px;
+}
+.finish-buy{
+    font-size: .75em;
+    position: absolute;
+    width: max-content;
+    padding: 16px 25%;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    outline: 2px solid rgba(255, 211, 0, .5);
+    outline-offset: -2px;
+    margin: 0 35px;
+    background: linear-gradient(90deg, #ffd300 0%, #d41e33 100%);
+    top: 80px;
+    left: 0;
+}
+
+.finish{
+    margin: auto;
+    
+    width: max-content;
+    font-size: .7em;
+}
+.modify{
+    left: 25px;
+    top: 0;
+    margin: auto;
+    font-size: .8em;
+    width: max-content;
+    
 }

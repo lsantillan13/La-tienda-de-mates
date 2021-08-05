@@ -1,20 +1,9 @@
-import React, {useEffect, useContext} from 'react';
-import Product from '../Product/Product';
-import CartContext from '../../Context/CartContext/CartContext';
+import React from 'react';
+import { data } from '../../data/productos/Data';
+import Product from '../Product/Product'
 import './Cart.css';
 
 function Cart(props) {
-// Content
-//   const { } = useContext(CartContext)
-//   useEffect(() => {
-//     getItems() 
-// }, [])
-
-
-
-
-
-
   const {products, onAdd} = props; 
   return (
 <main className="cart-title">
@@ -23,9 +12,8 @@ function Cart(props) {
 <div className="filter-box-top">ACA VAN LOS FILTROS</div>
 <div className="filter-box-aside grid_col--3">ACÁ VAN LOS FILTROS</div>
 <div className="product-list grid_col--9">
-  {products.map((product) => (
+  {data.map((product) => (
     <Product onAdd={onAdd} key={product.id} product={product}></Product>
-    
   ))}
 
 </div>

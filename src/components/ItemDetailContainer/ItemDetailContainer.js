@@ -6,13 +6,11 @@ import NavBar from '../Navbar/navBar';
 import Footer from '../Footer/Footer';
 
 function ItemDetailMain( props ){
-    // console.log(data.products.filter(post => post.tipo.includes('Mate')))
-
     const {id} = useParams()
     return(
     <main>
         <NavBar/>
-        {data.products.map((item) => item.id === id && <ItemDetailContainer item={item}/>)}
+        {data.map((item) => item.id === id && <ItemDetailContainer item={item}/>)}
         <Footer/>
     </main>      
     )}
