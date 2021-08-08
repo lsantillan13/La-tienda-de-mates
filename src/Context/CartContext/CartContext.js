@@ -3,7 +3,7 @@ export const CartContext = createContext();
 export const CartProvider = ({children}) => {
     const [carrito, setCarrito] = useState([])
     /*CONSOLE LOG PARA VER COMO SE SUMAN LOS ITEMS*/
-    console.log(carrito);
+    console.log(carrito)
     /*LOS ITEMS SE AGREGAN AL CARRITO DESDE LA HOME PAGE O DESDE EL ITEM DETAIL*/
     /*EN EL ITEM DETAIL LOS ITEMS SE AGREGAN AL FINALIZAR LA COMPRA*/
     const agregarAlCarrito = (itemRecibido) => {setCarrito([...carrito, itemRecibido])}
@@ -20,7 +20,7 @@ export const CartProvider = ({children}) => {
     const cantidadCarrito = () => {return carrito.reduce( (acc, prod) => parseInt(acc) + parseInt(prod.cantidad), 0)}
 
     return (
-        <CartContext.Provider value={{carrito, agregarAlCarrito, cantidadCarrito, eliminarProducto,clearCart,}}>
+        <CartContext.Provider value={{ carrito, agregarAlCarrito, cantidadCarrito, eliminarProducto,clearCart}}>
             {children}
         </CartContext.Provider>
     )}

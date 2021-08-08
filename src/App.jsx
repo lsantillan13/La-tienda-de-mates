@@ -10,6 +10,8 @@ import {CartProvider} from './Context/CartContext/CartContext';
 import { ViewProvider } from "./Context/CartView Context/CartViewContext";
 import ItemContainer from "./components/ItemContainer/ItemContainer";
 
+/*COMPONENTE DE PRUEBA*/
+import Test from "./Pages/Test/Test";
 // import Login from "./components/Login/Login";
 // import {MyCount} from './components/Contador/Contador';
 function App() {
@@ -24,7 +26,7 @@ function App() {
     <Route exact path="/category/:categoryId" component={MatesContainer}/>
     <Route exact path="/Productos/Todos los productos" component={ProductsContainer}/>
     <Route exact path="/Itemcontainer" component={ItemContainer}/>
-    <Route exact path="/Cart" /*component={ShoppingCart}*//>
+    <Route path="/Cart" component={Test}/>
     </ViewProvider>
     </CartProvider>
   </Switch>

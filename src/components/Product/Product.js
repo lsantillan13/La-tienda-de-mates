@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Link} from 'react-router-dom';
-
+import {CartContext} from '../../Context/CartContext/CartContext';
 function Product(props) {
+    const {carrito} = useContext(CartContext)
     const {product, onAdd} = props;
     return (
         <div>
@@ -18,7 +19,7 @@ function Product(props) {
             <div className="product--info"> {product.descripcion}</div>
             <div className="product--price">{'$' + product.precio}</div>
             {/*ACA TENGO QUE HACER UNA FUNCION PARA AÑADIR AL CARRO Y/O NEW TAB AL CARRITO*/}
-            <button onClick={() => onAdd(product)}className="add-to-cart">Añadir al Carrito</button>
+            <button onClick={() => onAdd(product)} className="add-to-cart">Añadir al Carrito</button>
             </div>
             </div>
             {/* <img style={{position: 'relative', background: 'green', width: '200px', height: '200px'}} className="small" src={product.imagen} alt={product.nombre}></img>

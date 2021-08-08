@@ -6,7 +6,7 @@ const CartWidget = () => {
     const {cantidadCarrito} = useContext(CartContext)
 return (
     <>
-    <p className="cart-widget-ammount">{cantidadCarrito()}</p>
+    {cantidadCarrito(0) ? <p className="cart-widget-ammount">{cantidadCarrito()}</p> : null}
     </>
 )
 }
