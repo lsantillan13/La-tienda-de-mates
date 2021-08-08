@@ -1,15 +1,15 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext/CartContext';
 
 
 const Item = ({nombre, info, id, precio, img}) => {
-    const {carrito, agregarAlCarrito} = useContext(CartContext);
+    const [count] = useState(1);
+    const {agregarAlCarrito} = useContext(CartContext);
     const handleAgregar = () => {
         agregarAlCarrito({
-            nombre,
-            precio,
-            id
+            "item": `Nombre: ${nombre}, Id: ${id}`,
+            "cantidad": `${count}`,
     })}
     return (
         <>

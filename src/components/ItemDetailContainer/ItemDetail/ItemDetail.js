@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import './ItemDetail.css';
 import Counter from '../../Counter/Counter';
+import { CartContext } from '../../../Context/CartContext/CartContext';
+
 function ItemDetailContainer( props ){
     const {item} = props;
+    const nombre = item.nombre;
+    const precio = item.precio;
     return(
     <>
-    <ItemDetail item={item}/>
+    <ItemDetail item={item} xid={item.id} nombre={nombre} precio={precio}/>
     </>
     )}
 export {ItemDetailContainer}
@@ -15,7 +19,16 @@ function ItemDetail ( props ) {
     const [count, setCount] = useState(1);
     const [finished, setFinished] = useState(false);
     const handleState = () => setFinished(!finished);
-    const {item} = props;
+    const {item, nombre, xid, id} = props;
+    const {agregarAlCarrito, eliminarProducto, clearCart} = useContext(CartContext);
+    const handleAñadir = () => {
+        agregarAlCarrito({
+            "item": `Nombre: ${nombre}, Id: ${xid}`,
+            "cantidad": `${count}`,
+    })}
+    const handleEliminar = () => {
+        eliminarProducto(id)
+    }
     return (
         <main className="section container-fluid">
             <div className="product__image-container">
@@ -29,6 +42,8 @@ function ItemDetail ( props ) {
                 <div className="grid--bottom">
                     <div className="contador-container">
                 </div>
+                <button onClick={handleEliminar}>Eliminar Item</button>
+                <button className="empty-chart" onClick={clearCart}>Vaciar carrito</button>
                  <span>Cantidad</span>
             </div>
             <div className="counter">
@@ -38,9 +53,10 @@ function ItemDetail ( props ) {
              ):(
                  <>
                 <Link to="/Cart" onClick={handleState}>
-                <button onClick={handleState} className="finish-buy finish">Terminar compra</button>
+                <button onClick={handleState, handleAñadir} className="finish-buy finish">Terminar compra</button>
                 </Link>
                 <button onClick={handleState} className="finish-buy modify">Modificar</button>
+                
                 </>
              ) 
             }

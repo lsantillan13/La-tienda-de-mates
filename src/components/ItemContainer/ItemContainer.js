@@ -9,7 +9,6 @@ const ItemContainer = () => {
     const myFilter0 = data.filter((x) => x.tipo === "Mate");
     const myFilter1 = data.filter((x) => x.tipo === "Combo");
     const myFilter2 = data.filter((x) => x.tipo === "GiftBox");
-
 return(
 <main className="itemcontainer container-fluid">
 
@@ -36,7 +35,6 @@ return(
         {myFilter1.map((x) =>
         <div className="product" key={x.id}>
         <Item nombre={x.nombre} precio={x.precio} img={x.imagen} info={x.descripcion} id={x.id}>  </Item>
-        <button className="add-to-cart">Añadir al Carrito</button>
         </div>)}
     </div>
 
@@ -50,7 +48,6 @@ return(
         {myFilter2.map((x) =>
         <div className="product" key={x.id}>
         <Item x={x} nombre={x.nombre} precio={x.precio} img={x.imagen} info={x.descripcion} id={x.id}/>
-        <button className="add-to-cart">Añadir al Carrito</button>
         </div>)}
     </div>
 </main>

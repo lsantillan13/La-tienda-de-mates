@@ -86,7 +86,7 @@ width: max-content;
     font-weight: 900;
     color: palevioletred;
     position: relative;
-    left: 38%;
+    left: -120px;
 }
 
 
@@ -199,4 +199,9 @@ width: max-content;
     font-size: .8em;
     width: max-content;
     
+}
+.empty-chart{
+    position: relative;
+    left: -150px;
+    top: 40px;
 }

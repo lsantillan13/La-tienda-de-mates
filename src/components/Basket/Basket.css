@@ -1,9 +1,8 @@
 .Cart--Container {
     width: 100%;
-    background: #d9d9d9;
+    background: #d9d9d9;    
 }
-.Cart-view-container{   
-}
+
 .Cart-view-popup-top{
     font-size: 1.1em;
     margin: 10px 10px;
@@ -41,6 +40,7 @@
     
 }
 .Cart-view-item-container{
+
     position: relative;
     height: 150px;
     width: 70%;
@@ -81,3 +81,14 @@
     border: none; position: relative;
     color: #fff; cursor: pointer; outline: 2px solid rgba(255,211,0,.5); outline-offset: -2px; text-align: center;
     background: linear-gradient(90deg,#ffd300 0%,#d41e33 100%);}
+/*ESTE ES EL CONTENEDOR DEL BASKET*/
+/* .Cart-Container{} */
+.close-popup{
+    font-size: 2em;
+    position: absolute;
+    left: 90%;
+    top: 1px;
+    color:black;}
+.close-popup:hover{
+    color: red;
+}

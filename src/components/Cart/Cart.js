@@ -4,7 +4,7 @@ import Product from '../Product/Product'
 import './Cart.css';
 
 function Cart(props) {
-  const {products, onAdd} = props; 
+  const {onAdd} = props; 
   return (
 <main className="cart-title">
 <h2>Todos los productos</h2>

@@ -1,18 +1,18 @@
 import {Link} from "react-router-dom";
-import React from "react";
+import React, {useContext} from "react";
 import "./navbar.css";
 import User from '../../assets/img/user.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsSearch } from 'react-icons/bs';
 import Cartsvg from '../../assets/img/shopping-cart.svg';
 import ItemList from '../../data/productos/itemlist.json';
+import CartWidget from "../CartWidget/CartWidget";
+import { CartViewContext } from "../../Context/CartView Context/CartViewContext";
 
-
-const NavBar = ( { props}) => {
-
+const NavBar = ({props}) => {
+    const {setIsOpen} = useContext(CartViewContext)
 return (
     <main>
-
 <nav className="navbar-style container-fluid">
 <Link to={`/`}>
 <h1 className="brand">La Tienda de Mates</h1>
@@ -51,7 +51,8 @@ return (
     </li>
 
     <li className="list-item Shopping-cart">
-    <button><img className="Cart" src={Cartsvg} alt="shopping-cart-icon"/>Cart</button>
+    <button onClick={() => setIsOpen(true)}><img className="Cart" src={Cartsvg} alt="shopping-cart-icon"/>Cart</button>
+    <CartWidget/>
     
     </li>
 </ul>
@@ -61,7 +62,6 @@ return (
     <label htmlFor="check"><BsSearch className="search"/></label>
     </div>
     </span>
-
     </nav>
 
 </main>

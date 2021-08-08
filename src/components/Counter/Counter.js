@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 
 const Counter = ({initial, stock, count, setCount}) => {
     const cannotAnymore = 1;
-    console.log(stock)
     return (
     <div className="Counter-buttons">
         <button onClick={() => setCount(count < stock ? count + 1 : count + 0)}  className="add"><p>+</p></button>

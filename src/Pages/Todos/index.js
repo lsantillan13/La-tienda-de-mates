@@ -27,9 +27,6 @@ return (
     <Cart onAdd={onAdd} products={products}/>
 
   </section>
-  <aside className="Cart-Container">
-    <CartView style={{position: 'relative'}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>
-  </aside>
-  
+  <CartView style={{position: 'relative'}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>  
 
 </main>)}

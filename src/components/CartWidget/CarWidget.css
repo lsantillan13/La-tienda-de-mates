@@ -1,0 +1,10 @@
+.cart-widget-ammount{
+    color: #fafafa;
+    position: relative;
+    top:  -35px;
+    left: 95px;
+    background: red;
+    width: 30px;
+    font-size: 1em;
+    border-radius: 50%;
+}
