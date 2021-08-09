@@ -1,8 +1,10 @@
 import React,{useContext} from 'react';
+import { CartContext } from '../../Context/CartContext/CartContext';
 import { CartViewContext } from '../../Context/CartView Context/CartViewContext';
 import './Basket.css';
 
 function CartView (props) {
+    const {carrito, removeItem} = useContext(CartContext);
     const {cartItems, onAdd, onRemove} = props;
     const itemsPrice = cartItems.reduce((a,c) =>  a + c.precio * c.qty, 0);
     const {setIsOpen, isOpen} = useContext(CartViewContext)
@@ -17,7 +19,7 @@ function CartView (props) {
             <button className="close-popup" onClick={() => setIsOpen(false)}>X</button>
             </div>
             <div className="Cart-view-status">
-                {cartItems.length === 0 && <div className="empty-img"><img src="https://th.bing.com/th/id/OIP.pdR1EBlUfZE2_dt2EIX6VgHaGw?pid=ImgDet&rs=1" alt="imagen-carrito-vacio"/></div>}
+               
             </div>
             {cartItems.map((item) => (
                 <div className="Cart-view-item-container" key={item.id}>

@@ -51,7 +51,7 @@ return (
     </li>
 
     <li className="list-item Shopping-cart">
-    <button onClick={() => setIsOpen(true)}><img className="Cart" src={Cartsvg} alt="shopping-cart-icon"/>Cart</button>
+    <Link to="/Cart"><button><img className="Cart" src={Cartsvg} alt="shopping-cart-icon"/>Cart</button></Link>
     <CartWidget/>
     
     </li>

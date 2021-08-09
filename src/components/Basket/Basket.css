@@ -92,3 +92,80 @@
 .close-popup:hover{
     color: red;
 }
+
+
+.shoppingcart{
+    position: relative;
+    top: 150px;
+    height: 100vh;
+    width: 100%;
+    background-color: #d9d9d9;
+}
+.shoppingcart h2{
+    margin: 10px 60px;
+    background: #fafafa;
+}
+.product-on-cart{
+    margin: 60px;
+    outline: 1px solid #d9d9d9;
+}
+.shoppingcart-item-container{
+    width: 100%;
+    height: 153px;
+}
+.cart-container{
+    background: #fafafa;
+}
+.shoppingcart-img-container{
+    position: relative;
+    left: 75px;
+    width: 130px;
+    bottom: 45px;
+}
+.shoppingcart-img-container img{
+    width: 100%;
+}
+.shopping-cart-name{
+    font-size: 1.5em;
+    position: relative;
+    width: max-content;
+    left: 232px;
+    top: 50px;
+}
+.shoppingcart-buttons{
+    display: flex;
+}
+.shoppingcart-buttons button{
+    outline: 1px solid #d9d9d9;
+    width: min-content;
+    padding: 2px 15px;
+    margin: 0 10px;
+    position: relative;
+    bottom: 140px;
+    left: 700px;
+}
+.shoppingcart-buttons p{
+    position: relative;
+    left: 700px;
+    font-size: 2em;
+    bottom: 135px;
+    width: max-content;
+}
+.shoppingcart-price{
+    position: relative;
+    float: right;
+    right: 50px;
+    bottom: 200px;
+    font-size: 2em;
+}
+
+.shoppingcart-filters{
+    display: flex;
+    list-style: none;
+}
+.shoppingcart-filters li{
+    margin: 0 250px;
+    font-size: 1.2em;
+    position: relative;
+    left: -100px;
+}

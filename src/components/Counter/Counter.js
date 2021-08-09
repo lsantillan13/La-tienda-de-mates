@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Counter = ({initial, stock, count, setCount}) => {
+const Counter = ({stock, count, setCount}) => {
     const cannotAnymore = 1;
     return (
     <div className="Counter-buttons">

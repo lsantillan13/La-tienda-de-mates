@@ -8,9 +8,11 @@ function ItemDetailContainer( props ){
     const {item} = props;
     const nombre = item.nombre;
     const precio = item.precio;
+    const imagen = item.imagen;
+    const stock = item.stock
     return(
     <>
-    <ItemDetail item={item} xid={item.id} nombre={nombre} precio={precio}/>
+    <ItemDetail item={item} xid={item.id} nombre={nombre} precio={precio} imagen={imagen} stock={stock}/>
     </>
     )}
 export {ItemDetailContainer}
@@ -19,15 +21,19 @@ function ItemDetail ( props ) {
     const [count, setCount] = useState(1);
     const [finished, setFinished] = useState(false);
     const handleState = () => setFinished(!finished);
-    const {item, nombre, xid, id} = props;
+    const {item, nombre, xid, id, precio, stock} = props;
     const {agregarAlCarrito, eliminarProducto, clearCart} = useContext(CartContext);
     const handleAñadir = () => {
         agregarAlCarrito({
-            "item": `Nombre: ${nombre}, Id: ${xid}`,
-            "cantidad": `${count}`,
+            "nombre": `${nombre}`, 
+            "id": `${xid}`,
+            "cantidad": `${count}`, 
+            "imagen": `${item.imagen}`,
+            "precio": `${precio}`,
+            "stock": `${stock}`
     })}
-    const handleEliminar = () => {
-        eliminarProducto(id)
+const handleEliminar = () => {
+eliminarProducto(id)
     }
     return (
         <main className="section container-fluid">
@@ -42,8 +48,6 @@ function ItemDetail ( props ) {
                 <div className="grid--bottom">
                     <div className="contador-container">
                 </div>
-                <button onClick={handleEliminar}>Eliminar Item</button>
-                <button className="empty-chart" onClick={clearCart}>Vaciar carrito</button>
                  <span>Cantidad</span>
             </div>
             <div className="counter">

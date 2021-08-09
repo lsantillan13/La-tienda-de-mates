@@ -8,8 +8,11 @@ const Item = ({nombre, info, id, precio, img}) => {
     const {agregarAlCarrito} = useContext(CartContext);
     const handleAgregar = () => {
         agregarAlCarrito({
-            "item": `${nombre} x ${count} | $${precio}`,
-            "cantidad": `${count}`
+            "nombre": `${nombre}`, 
+            "id": `${id}`,
+            "cantidad": `${count}`, 
+            "imagen": `${img}`,
+            "precio": `${precio}`
     })}
     return (
         <>
