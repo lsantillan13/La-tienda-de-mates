@@ -6,9 +6,9 @@ import { CartContext } from '../../../Context/CartContext/CartContext';
 
 function ItemDetailContainer( props ){
     const {item} = props;
-    const nombre = item.nombre;
-    const precio = item.precio;
-    const imagen = item.imagen;
+    const nombre = item.name;
+    const precio = item.price;
+    const imagen = item.img;
     const stock = item.stock
     return(
     <>
@@ -18,6 +18,7 @@ function ItemDetailContainer( props ){
 export {ItemDetailContainer}
 /*      &&&&&&&     */
 function ItemDetail ( props ) {
+
     const [count, setCount] = useState(1);
     const [finished, setFinished] = useState(false);
     const handleState = () => setFinished(!finished);
@@ -38,13 +39,13 @@ eliminarProducto(id)
     return (
         <main className="section container-fluid">
             <div className="product__image-container">
-                <img className="product__image" src={item.imagen} alt={`imagen-de-producto ${item.id}`}/>
+                <img className="product__image" src={item.img} alt={`imagen-de-producto ${item.id}`}/>
             </div>
             <div className="product__details">
-                <span className="product__tag"> {item.tipo} </span>
-                <div className="product__name product__title">{item.nombre}</div>
-                <div className="product__info"> {item.descripcion} </div>
-                <div className="product__price">{`$ ${item.precio}`}</div>
+                <span className="product__tag"> {item.type} </span>
+                <div className="product__name product__title">{item.name}</div>
+                <div className="product__info"> {item.description} </div>
+                <div className="product__price">{`$ ${item.price}`}</div>
                 <div className="grid--bottom">
                     <div className="contador-container">
                 </div>

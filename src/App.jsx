@@ -9,6 +9,7 @@ import ProductsContainer from './Pages/Todos';
 import {CartProvider} from './Context/CartContext/CartContext';
 import { ViewProvider } from "./Context/CartView Context/CartViewContext";
 import ItemContainer from "./components/ItemContainer/ItemContainer";
+import FirebaseTest from './Pages/FirebaseTest/FirebaseTest';
 
 /*COMPONENTE DE PRUEBA*/
 // import Login from "./components/Login/Login";
@@ -25,6 +26,7 @@ function App() {
     <Route exact path="/category/:categoryId" component={MatesContainer}/>
     <Route exact path="/Cart" component={ProductsContainer}/>
     <Route exact path="/Itemcontainer" component={ItemContainer}/>
+    <Route exact path="/Firebase" component={FirebaseTest}/>
     </ViewProvider>
     </CartProvider>
   </Switch>
