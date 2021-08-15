@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import { data } from '../../data/productos/Data';
 import Product from '../Product/Product';
 import { CartContext } from '../../Context/CartContext/CartContext';
+import Form from '../Form/Form';
 import './Cart.css';
 
 function Cart() {
@@ -56,9 +57,14 @@ return (
                     <div className="row"> 
                     <div className="total-price"><strong>Total Price</strong></div>
                     {/* <div className="col-1 text-right"><strong>${totalPrice.toFixed(2)}</strong></div> */}
-                    <div className="price"><strong>{cantidadTotal}a</strong></div>
+                    <div className="price"><strong>${cantidadTotal()}.00</strong></div>
+                    </div>
+                    <div className="Form-container">
+                    <Form cantidadTotal={cantidadTotal} carrito={carrito}/>
+                    hola
                     </div>
                 </div>)}
+                
         </section>
 </main>
   )
