@@ -23,7 +23,6 @@
  ## About this project
 - This project was made in ReactJS.
 - Used dependencies on this project:
->>>>>>> 815a56d9bf355043ac67c5b36d6088b372d12911
 
 **For icons i'm using the 'Fort-Awesome' Package that includes:** 
 
