@@ -15,37 +15,39 @@
  </div>
  
  ## About this project
- This project was made in ReactJS.
- 
- Used dependencies on this project:
-For icons i'm using the 'Fort-Awesome' Package that includes:
-₁ React-Icons;
-₂ FontAwesome svg core;
-₃ Free Solid svg core;
-₄ React-FontAwesome;
+- This project was made in ReactJS.
+- Used dependencies on this project:
 
-I Also use styling dependencies like:
-₁ Bootstrap;
-₂ React-Bootstrap;
-        AND
-₄ React-Spring; for animations
-i'm using react-router-dom as well for routes handling focused to handling routes on a dynamic way.
- 
- 
+**For icons i'm using the 'Fort-Awesome' Package that includes:** 
 
-  To install node_modules.
+1.  *React-Icons;*
+2. *FontAwesome svg core;*
+3. *Free Solid svg core;*
+4. *React-FontAwesome;*
+
+**I Also use styling dependencies like:**
+
+1. *Bootstrap;*
+
+2. *React-Bootstrap;* 
+
+   ***AND***
+
+3. *React-Spring for animations* 
+
+**i'm using *react-router-dom* as well for routes handling**
+
+**To install node_modules.**
 
 ```react
 npm install
 ```
 
-To run this project.
+**To run this project.**
 
 ```react
 npm start
 ```
-
-
 
   
 
