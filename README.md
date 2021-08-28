@@ -12,8 +12,12 @@
       <img src="C:\Users\User\Desktop\react.png" style="width: 90px" />
       <img src="C:\Users\User\Desktop\js.png" style="width: 90px">
       <img src="C:\Users\User\Desktop\html.jpg" style="width: 140px">
+<<<<<<< HEAD
 </div>
 <img src="C:\Users\User\Desktop\html.jpg" style="width: 140px">
+=======
+      </div>
+>>>>>>> aff8c8fde99941dd58a97d3a17c11e3272895a60
 
   
 

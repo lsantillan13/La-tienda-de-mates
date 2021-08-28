@@ -55,7 +55,7 @@ function ItemDetail ( props ) {
              ):(
                  <>
                 <Link to="/Cart" onClick={handleState}>
-                <button onClick={handleState, handleAñadir} className="finish-buy finish">Terminar compra</button>
+                <button onClick={handleState || handleAñadir} className="finish-buy finish">Terminar compra</button>
                 </Link>
                 <button onClick={handleState} className="finish-buy modify">Modificar</button>
                 

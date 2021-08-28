@@ -22,7 +22,7 @@ function ItemDetailMain( props ){
     return(
     <main>
         <NavBar/>
-        {setProductoVisible.map((item) => item.id === id && <ItemDetailContainer item={item}/>)}
+        {productoVisible.map((item) => item.id === id && <ItemDetailContainer item={item}/>)}
         <Footer/>
     </main>      
     )}

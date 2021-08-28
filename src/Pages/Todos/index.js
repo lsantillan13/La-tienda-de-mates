@@ -17,7 +17,7 @@ return (
 <main className="Allprods-main container-fluid">
   <NavBar></NavBar>
   <section className="product-list-container">
-    <Cart onAdd={onAdd}/>
+    <Cart onAdd={onAdd} onRemove={onRemove}/>
 
   </section>
   

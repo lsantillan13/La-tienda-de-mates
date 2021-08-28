@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import React from "react";
 import "./navbar.css";
 import User from '../../assets/img/user.svg';
@@ -8,6 +8,7 @@ import Cartsvg from '../../assets/img/shopping-cart.svg';
 import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
+    const {CategoryId} = useParams();
 return (
     <main>
 <nav className="navbar-style container-fluid">
@@ -21,14 +22,14 @@ return (
         <h2 className="subnav--title">Productos</h2>
         <div className="subnav-item-container">
             <ul className="subnav--list">
-        <Link to="/Category/:CategoryId" className="subnav-item">Mates</Link>
-        <Link to="/Category/:CategoryId" className="subnav-item">Yerba</Link>
-        <Link to="/Category/:CategoryId" className="subnav-item">Blends</Link>
-        <Link to="/Category/:CategoryId" className="subnav-item">Tablas</Link>
-        <Link to="/Category/:CategoryId" className="subnav-item">Bombillas</Link>
-        <Link to="/Category/:CategoryId" className="subnav-item">Combos</Link>
-        <Link to="/Category/:CategoryId" className="subnav-item">Cajas de regalo</Link>
-        <Link to="/Category/:CategoryId" className="subnav-item">Yerberas y Azucareras</Link>
+        <Link to={`/Category/${CategoryId}`} className="subnav-item">Mates</Link>
+        <Link to={`/Category/${CategoryId}`} className="subnav-item">Yerba</Link>
+        <Link to={`/Category/${CategoryId}`} className="subnav-item">Blends</Link>
+        <Link to={`/Category/${CategoryId}`} className="subnav-item">Tablas</Link>
+        <Link to={`/Category/${CategoryId}`} className="subnav-item">Bombillas</Link>
+        <Link to={`/Category/${CategoryId}`} className="subnav-item">Combos</Link>
+        <Link to={`/Category/${CategoryId}`} className="subnav-item">Cajas de regalo</Link>
+        <Link to={`/Category/${CategoryId}`} className="subnav-item">Yerberas y Azucareras</Link>
        </ul>
        <h2 className="subnav--subtitle">Más vendido</h2>
        <div className="image-container">
