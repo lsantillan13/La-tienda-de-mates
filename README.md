@@ -1,4 +1,4 @@
-##                                                        						Hi 👋, I'm Lautaro Santillán
+## <center>Hi 👋, I'm Lautaro Santillán</center>
 
 #### 		A Passionate fullstack developer from Neuquén, Argentina.	
 
@@ -16,7 +16,7 @@
  </div>
  
  ## Buy Demo
- <img src="https://media.giphy.com/media/GbX29sdlUX9YZvaOu7/giphy.gif?cid=790b7611b9528df8a239eced110ac21a21335b1d34b2f5fa&rid=giphy.gif&ct=g" width="100%" height="auto"/>
+ <img src="https://media.giphy.com/media/GbX29sdlUX9YZvaOu7/giphy.gif?cid=790b7611b9528df8a239eced110ac21a21335b1d34b2f5fa&rid=giphy.gif&ct=g" width="70%" height="auto"/>
 
  
  ## About this project
