@@ -8,11 +8,9 @@
 
 - 💬 Ask me about React, Javascript, Performance web and anything about web development.
 
-<div>
       <img src="https://i.imgur.com/qANYJqe.png" style="width: 20px" />
       <img src="C:\Users\User\Desktop\js.png" style="width: 90px">
       <img src="C:\Users\User\Desktop\html.jpg" style="width: 140px">
- </div>
  
  ## Buy Demo
  <p align="center">
