@@ -1,4 +1,4 @@
-## <center>Hi 👋, I'm Lautaro Santillán</center>
+## Hi 👋, I'm Lautaro Santillán
 
 #### 		A Passionate fullstack developer from Neuquén, Argentina.	
 
@@ -9,14 +9,13 @@
 - 💬 Ask me about React, Javascript, Performance web and anything about web development.
 
 <div>
-      <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
-      <img src="C:\Users\User\Desktop\react.png" style="width: 90px" />
+      <img src="https://i.imgur.com/qANYJqe.png" style="width: 90px" />
       <img src="C:\Users\User\Desktop\js.png" style="width: 90px">
       <img src="C:\Users\User\Desktop\html.jpg" style="width: 140px">
  </div>
  
  ## Buy Demo
- <img src="https://media.giphy.com/media/GbX29sdlUX9YZvaOu7/giphy.gif?cid=790b7611b9528df8a239eced110ac21a21335b1d34b2f5fa&rid=giphy.gif&ct=g" width="70%" height="auto"/>
+ <img src="https://media.giphy.com/media/GbX29sdlUX9YZvaOu7/giphy.gif?cid=790b7611b9528df8a239eced110ac21a21335b1d34b2f5fa&rid=giphy.gif&ct=g" width="auto" height="auto"/>
 
  
  ## About this project
