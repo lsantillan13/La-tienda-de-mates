@@ -18,18 +18,7 @@
  <img src="https://media.giphy.com/media/GbX29sdlUX9YZvaOu7/giphy.gif?cid=790b7611b9528df8a239eced110ac21a21335b1d34b2f5fa&rid=giphy.gif&ct=g" width="auto" height="auto"/>
      </p>
 
-<<<<<<< HEAD
-- <div>
-      <img src="C:\Users\User\Desktop\react.png" style="width: 90px" />
-      <img src="C:\Users\User\Desktop\js.png" style="width: 90px">
-      <img src="C:\Users\User\Desktop\html.jpg" style="width: 140px">
-<<<<<<< HEAD
-</div>
 <img src="C:\Users\User\Desktop\html.jpg" style="width: 140px">
-=======
-      </div>
->>>>>>> aff8c8fde99941dd58a97d3a17c11e3272895a60
-=======
  
  ## About this project
 - This project was made in ReactJS.
