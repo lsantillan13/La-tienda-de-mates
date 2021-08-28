@@ -12,6 +12,7 @@
       <img src="C:\Users\User\Desktop\react.png" style="width: 90px" />
       <img src="C:\Users\User\Desktop\js.png" style="width: 90px">
       <img src="C:\Users\User\Desktop\html.jpg" style="width: 140px">
+      </div>
 
   
 
