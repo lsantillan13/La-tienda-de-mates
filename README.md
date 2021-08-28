@@ -9,8 +9,8 @@
 - 💬 Ask me about React, Javascript, Performance web and anything about web development.
 <div>
       <img src="https://i.imgur.com/qANYJqe.png" width="90px"/>
-      <img src="https://imgur.com/aAtbvJi.png" width="90px">
-      <img src="https://imgur.com/dEutKP2.png" width"90px">
+      <img src="https://imgur.com/aAtbvJi.png" width="90px"/>
+      <img src="https://imgur.com/dEutKP2.png" width"90px"/>
  </div>
  
  ## Buy Demo
