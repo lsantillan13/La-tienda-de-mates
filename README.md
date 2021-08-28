@@ -9,6 +9,7 @@
 - 💬 Ask me about React, Javascript, Performance web and anything about web development.
 
 <div>
+      <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
       <img src="C:\Users\User\Desktop\react.png" style="width: 90px" />
       <img src="C:\Users\User\Desktop\js.png" style="width: 90px">
       <img src="C:\Users\User\Desktop\html.jpg" style="width: 140px">
