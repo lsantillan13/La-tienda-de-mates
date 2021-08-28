@@ -37,6 +37,8 @@
 
 **i'm using *react-router-dom* as well for routes handling**
 
+## How to run it?
+
 **To install node_modules.**
 
 ```react
