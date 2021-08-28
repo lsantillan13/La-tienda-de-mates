@@ -8,6 +8,7 @@ import {database} from '../../Firebase/Firebase';
 function ItemDetailMain( props ){
      /*LLAMADO AL FIRESTORE*/
      const [productoVisible, setProductoVisible] = React.useState([]);
+     React.useEffect(() =>{
      const productos = database.collection("mates")
      productos.get().then((query) =>
              setProductoVisible(
@@ -16,11 +17,12 @@ function ItemDetailMain( props ){
                  })
              )
          );
+         });
     const {id} = useParams()
     return(
     <main>
         <NavBar/>
-        {productoVisible.map((item) => item.id === id && <ItemDetailContainer item={item}/>)}
+        {setProductoVisible.map((item) => item.id === id && <ItemDetailContainer item={item}/>)}
         <Footer/>
     </main>      
     )}

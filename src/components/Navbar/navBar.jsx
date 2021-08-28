@@ -1,16 +1,13 @@
 import {Link} from "react-router-dom";
-import React, {useContext} from "react";
+import React from "react";
 import "./navbar.css";
 import User from '../../assets/img/user.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsSearch } from 'react-icons/bs';
 import Cartsvg from '../../assets/img/shopping-cart.svg';
-import ItemList from '../../data/productos/itemlist.json';
 import CartWidget from "../CartWidget/CartWidget";
-import { CartViewContext } from "../../Context/CartView Context/CartViewContext";
 
-const NavBar = ({props}) => {
-    const {setIsOpen} = useContext(CartViewContext)
+const NavBar = () => {
 return (
     <main>
 <nav className="navbar-style container-fluid">
@@ -35,7 +32,8 @@ return (
        </ul>
        <h2 className="subnav--subtitle">Más vendido</h2>
        <div className="image-container">
-           <img className="subnav-image" alt={"imagen-producto-destacado"} src={ItemList.MateList[0].imagen}></img>
+           {/* ESTE HAY QUE CAMBIARLO */}
+           {/* <img className="subnav-image" alt={"imagen-producto-destacado"} src={ItemList.MateList[0].imagen}></img> */}
        </div>
        <Link to="/Productos/Todos los productos"><button className="subnav-button">Todos los Productos</button></Link>
        </div>

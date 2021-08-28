@@ -22,20 +22,17 @@ function ItemDetail ( props ) {
     const [count, setCount] = useState(1);
     const [finished, setFinished] = useState(false);
     const handleState = () => setFinished(!finished);
-    const {item, nombre, xid, id, precio, stock} = props;
-    const {agregarAlCarrito, eliminarProducto, clearCart} = useContext(CartContext);
+    const {item, nombre, xid, precio, stock} = props;
+    const {agregarAlCarrito} = useContext(CartContext);
     const handleAñadir = () => {
         agregarAlCarrito({
             "nombre": `${nombre}`, 
             "id": `${xid}`,
             "cantidad": `${count}`, 
-            "imagen": `${item.imagen}`,
+            "imagen": `${item.img}`,
             "precio": `${precio}`,
             "stock": `${stock}`
-    })}
-const handleEliminar = () => {
-eliminarProducto(id)
-    }
+  })}
     return (
         <main className="section container-fluid">
             <div className="product__image-container">

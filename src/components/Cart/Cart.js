@@ -1,11 +1,10 @@
 import React, {useContext, useState} from 'react';
-import { data } from '../../data/productos/Data';
-import Product from '../Product/Product';
 import { CartContext } from '../../Context/CartContext/CartContext';
 import Form from '../Form/Form';
 import './Cart.css';
 
 function Cart() {
+
   const [cuenta, setCuenta] = useState(1);
   const {carrito, removeItem, clearCart, cantidadTotal} = useContext(CartContext);
   const cannotAnymore = 1;
@@ -61,7 +60,6 @@ return (
                     </div>
                     <div className="Form-container">
                     <Form cantidadTotal={cantidadTotal} carrito={carrito}/>
-                    hola
                     </div>
                 </div>)}
                 

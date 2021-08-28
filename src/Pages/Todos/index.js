@@ -1,14 +1,8 @@
 import React from 'react'
 import Cart from '../../components/Cart/Cart';
-import CartView from '../../components/Basket/Basket';
-import {data} from '../../data/productos/Data';
 import NavBar from '../../components/Navbar/navBar'
 import './index.css';
-/**CONTEXT**/
-// import CartContext from '../../Context/CartContext/CartContext';
-
 export default function ProductsContainer() {
-  const {products} = data;
   const [cartItems, setCartItems] = React.useState([]);     
   /*AÑADIR AL CARRITO*/
   const onAdd = (product) => {
@@ -23,10 +17,9 @@ return (
 <main className="Allprods-main container-fluid">
   <NavBar></NavBar>
   <section className="product-list-container">
-  {/* <CartContext/><CartContext/> */}
-    <Cart onAdd={onAdd} products={products}/>
+    <Cart onAdd={onAdd}/>
 
   </section>
-  <CartView style={{position: 'relative'}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>  
+  
 
 </main>)}

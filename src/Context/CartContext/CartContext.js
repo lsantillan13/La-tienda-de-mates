@@ -24,6 +24,7 @@ export const CartProvider = ({children}) => {
     const agregarAlCarrito = (itemRecibido) => {
     if (isntInCart(itemRecibido)) {setCarrito([...carrito, itemRecibido]);} 
     else {alert("El Producto ya se encuentra en el carrito!");}};
+    
            
     /*CANTIDAD PARA EL WIDGET*/
     const cantidadCarrito = () => {return carrito.reduce( (acc, prod) => parseInt(acc) + parseInt(prod.cantidad), 0)}

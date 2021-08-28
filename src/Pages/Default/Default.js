@@ -1,12 +1,7 @@
 import React from 'react';
 import NavBar from '../../components/Navbar/navBar';
 import ItemContainer from '../../components/ItemContainer/ItemContainer';
-// import {database} from "../../Firebase/Firebase";
-
-
-
-function Default (props){
-
+function Default (){
     return(
         <main className="App">
              <NavBar/>
