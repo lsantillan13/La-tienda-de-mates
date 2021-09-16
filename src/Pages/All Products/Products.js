@@ -15,7 +15,7 @@ const [verProductos, setVerProductos] = React.useState([]);
             })
         )
     );
-});
+}, []);
 
 return (
     <main>

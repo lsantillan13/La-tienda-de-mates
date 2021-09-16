@@ -8,7 +8,8 @@ import Cartsvg from '../../assets/img/shopping-cart.svg';
 import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
-    const {CategoryId} = useParams();
+    const {category} = useParams();
+    console.log(category)
 return (
     <main>
 <nav className="navbar-style container-fluid">
@@ -22,14 +23,14 @@ return (
         <h2 className="subnav--title">Productos</h2>
         <div className="subnav-item-container">
             <ul className="subnav--list">
-        <Link to={`/Category/${CategoryId}`} className="subnav-item">Mates</Link>
-        <Link to={`/Category/${CategoryId}`} className="subnav-item">Yerba</Link>
-        <Link to={`/Category/${CategoryId}`} className="subnav-item">Blends</Link>
-        <Link to={`/Category/${CategoryId}`} className="subnav-item">Tablas</Link>
-        <Link to={`/Category/${CategoryId}`} className="subnav-item">Bombillas</Link>
-        <Link to={`/Category/${CategoryId}`} className="subnav-item">Combos</Link>
-        <Link to={`/Category/${CategoryId}`} className="subnav-item">Cajas de regalo</Link>
-        <Link to={`/Category/${CategoryId}`} className="subnav-item">Yerberas y Azucareras</Link>
+        <Link to={`/Category/Mate`} className="subnav-item">Mates</Link>
+        <Link to={`/Category/Yerba`} className="subnav-item">Yerba</Link>
+        <Link to={`/Category/Blends`} className="subnav-item">Blends</Link>
+        <Link to={`/Category/Tablas`} className="subnav-item">Tablas</Link>
+        <Link to={`/Category/Bombillas`} className="subnav-item">Bombillas</Link>
+        <Link to={`/Category/Combo`} className="subnav-item">Combos</Link>
+        <Link to={`/Category/Giftbox`} className="subnav-item">Cajas de regalo</Link>
+        <Link to={`/Category/Yerberas-azucareras`} className="subnav-item">Yerberas y Azucareras</Link>
        </ul>
        <h2 className="subnav--subtitle">Más vendido</h2>
        <div className="image-container">

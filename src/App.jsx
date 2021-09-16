@@ -24,17 +24,17 @@ function App() {
   <Switch>
     <CartProvider>
       <ViewProvider>
-        <Route exact path="/" component={Default}/>
-        <Route exact path="/item/:id" component={ItemDetailMain}/>
-        <Route exact path="/Category/:CategoryId" component={CatContainer}/>
-        <Route exact path="/Cart" component={ProductsContainer}/>
-        <Route exact path="/Itemcontainer" component={ItemContainer}/>
-        <Route exact path="/Login" component={Login}/>
-        <Route exact path="/Tips" component={Tips}/>
-        <Route exact path="/Mayorista" component={Mayorista}/>
-        <Route exact path="/Productos/Todos los productos" component={Products}/>
-        <Route exact path="/Sale" component={Sale}/>
-        </ViewProvider>
+       <Route exact path="/" component={Default}/>
+       <Route exact path="/item/:id" component={ItemDetailMain}/>
+       <Route exact path="/Category/:category" component={CatContainer}/>
+       <Route exact path="/Cart" component={ProductsContainer}/>
+       <Route exact path="/Itemcontainer" component={ItemContainer}/>
+       <Route exact path="/Login" component={Login}/>
+       <Route exact path="/Tips" component={Tips}/>
+       <Route exact path="/Mayorista" component={Mayorista}/>
+       <Route exact path="/Productos/Todos los productos" component={Products}/>
+       <Route exact path="/Sale" component={Sale}/>
+       </ViewProvider>
     </CartProvider>
   </Switch>
 </div>)}

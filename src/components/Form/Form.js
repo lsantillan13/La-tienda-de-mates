@@ -4,7 +4,7 @@ import { database } from '../../Firebase/Firebase';
 
 const Form = ({cantidadTotal}) => {
 
-    const {carrito} = useContext(CartContext)
+    const {carrito, clearCart} = useContext(CartContext)
 
     /*PREVENT DEFAULT*/
     const handleSubmit = (ev) => {ev.preventDefault();
@@ -36,6 +36,8 @@ const Form = ({cantidadTotal}) => {
     .then((response) => {
         orderId = response.id;
         alert(`Compra generada con exito!\n Usuario: ${userData.name} \n Order Id: ${response.id}`)
+        clearCart();
+
     })
     .catch((err) => alert('ERROR: ', err))
     

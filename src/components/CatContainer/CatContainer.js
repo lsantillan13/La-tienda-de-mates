@@ -1,5 +1,4 @@
 import React from 'react';
-import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetail/ItemDetail';
 import NavBar from '../Navbar/navBar';
 import { useParams } from 'react-router';
 import {database} from '../../Firebase/Firebase';
@@ -16,21 +15,48 @@ const PRODUCTOS = database.collection('mates');
                return {...doc.data(), id: doc.id};
           })
      ))
-})
+}, []);
 
-const {CategoryId} = useParams()
+const {category} = useParams();
+
+const myFilter0 = myProds.filter((x) => x.type === "Mate");
+const myFilter1 = myProds.filter((x) => x.type === "Combo");
+const myFilter2 = myProds.filter((x) => x.type === "Giftbox");
+console.log(myFilter0)
 
 return(
      <>
      <NavBar/>
-     {myProds.map((x) => x.type = {CategoryId} && 
-    <section className="item-container">
-        <div className="product" key={x.id}>
-            <Item nombre={x.name} info={x.description} img={x.img} precio={x.price}/>
-        </div>
-    </section>)}
-                   
 
-     </>      
+     {/*MATES*/}
+     {category === "Mate" ?   <>
+     <div className="title title-container">  <h2 className="title-main-title">La Tienda de Mates</h2> <h2 className="subtitle">Productos destacados</h2></div>
+     <div className="top-products container-fluid"> {myFilter0.map((x) => <div className="product" key={x.id}><Item nombre={x.name} precio={x.price} img={x.img} info={x.description} id={x.id}> </Item>
+    </div>)}
+    </div>
+    </>
+    : <div className="title title-container 404">404 Not found</div>}
+
+     {/*COMBOS*/}
+     {category === "Combo" ?   <>
+     <div className="title title-container"><h2 className="title-main-title">La Tienda de Mates</h2><h2 className="subtitle">Productos destacados</h2></div>
+     <div className="top-products container-fluid">
+        {myFilter1.map((x) => <div className="product" key={x.id}><Item nombre={x.name} precio={x.price} img={x.img} info={x.description} id={x.id}> </Item>
+    </div>)}
+    </div>
+    </>
+    : <div className="title title-container 404">404 Not found</div>}
+
+    {/*Giftbox*/}
+    {category === "Giftbox" ?   <>
+     <div className="title title-container"><h2 className="title-main-title">La Tienda de Mates</h2><h2 className="subtitle">Productos destacados</h2></div>
+     <div className="top-products container-fluid">
+        {myFilter2.map((x) => <div className="product" key={x.id}><Item nombre={x.name} precio={x.price} img={x.img} info={x.description} id={x.id}> </Item>
+    </div>)}
+    </div>
+    </>
+    : <div className="title title-container 404">404 Not found</div>}
+     </>
+
 )}
 export default CatContainer;

@@ -33,7 +33,4 @@ const Item = ({nombre, info, id, precio, img}) => {
     )
 }
 
-
-
-
-export default Item
+export default Item;

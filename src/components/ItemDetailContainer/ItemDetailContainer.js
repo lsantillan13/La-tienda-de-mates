@@ -18,7 +18,7 @@ function ItemDetailMain( props ){
              )
          );
          });
-    const {id} = useParams()
+    const {id} = useParams();
     return(
     <main>
         <NavBar/>
